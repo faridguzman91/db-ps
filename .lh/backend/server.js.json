@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 10,
+            "activePatchIndex": 11,
             "patches": [
                 {
                     "date": 1660998792748,
@@ -48,6 +48,10 @@
                 {
                     "date": 1660999297147,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,19 +2,16 @@\n import express from 'express'\n import mysql from 'mysql2'\n \n \n-// const mysql2 = require('mysql2')\n \n-\n-\n const PORT = process.env.PORT || 3000\n \n \n const connection = mysql.createConnection(process.env.DATABASE_URL)\n console.log('connected to pscale db!')\n \n-// connection.end()\n+connection.end()\n \n dotenv.config()\n \n const app = express()\n"
+                },
+                {
+                    "date": 1661025944598,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,21 +1,22 @@\n-import dotenv from 'dotenv'\n-import express from 'express'\n-import mysql from 'mysql2'\n+import colors from 'colors';\n+import dotenv from 'dotenv';\n+import express from 'express';\n+import mysql from 'mysql2';\n \n+dotenv.config();\n \n \n-const PORT = process.env.PORT || 3000\n \n+const PORT = process.env.port || 5000\n \n-const connection = mysql.createConnection(process.env.DATABASE_URL)\n-console.log('connected to pscale db!')\n+const connectPscale = mysql.createConnection(process.env.DATABASE_URL)\n+console.log('Connected to Pscale!')\n+    // const {errorHandler} = require('.middleware/errorMiddleware')\n+    // const connection = require(\"mysql2/typings/mysql/lib/Connection\")\n+    // connection.end()\n \n-connection.end()\n+const app = express();\n \n-dotenv.config()\n-\n-const app = express()\n-\n app.listen(3001, () => {\n-    console.log('Server is listening on port 3001')\n+    console.log('app listening')\n })\n\\ No newline at end of file\n"
                 }
             ],
             "date": 1660998792748,
