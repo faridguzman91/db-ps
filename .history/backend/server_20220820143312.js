@@ -1,8 +1,7 @@
 import dotenv from 'dotenv'
 import express from 'express'
 import mysql from 'mysql2'
-
-
+X
 
 const PORT = process.env.PORT || 3000
 

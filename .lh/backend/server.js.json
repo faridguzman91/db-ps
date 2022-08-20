@@ -1,0 +1,58 @@
+{
+    "sourceFile": "backend/server.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 10,
+            "patches": [
+                {
+                    "date": 1660998792748,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1660998832019,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import dotenv from 'dotenv'\n import express from 'express'\n import mysql from 'mysql2'\n-X\n \n+\n const PORT = process.env.PORT || 3000\n \n \n const connection = mysql.createConnection(process.env.DATABASE_URL)\n"
+                },
+                {
+                    "date": 1660999034959,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,12 @@\n import dotenv from 'dotenv'\n import express from 'express'\n-import mysql from 'mysql2'\n+// import mysql from 'mysql2'\n \n \n+const mysql2 = require('mysql2')\n+\n+\n const PORT = process.env.PORT || 3000\n \n \n const connection = mysql.createConnection(process.env.DATABASE_URL)\n"
+                },
+                {
+                    "date": 1660999056245,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n import dotenv from 'dotenv'\n import express from 'express'\n-// import mysql from 'mysql2'\n+import mysql from 'mysql2'\n \n \n-const mysql2 = require('mysql2')\n+// const mysql2 = require('mysql2')\n \n \n const PORT = process.env.PORT || 3000\n \n"
+                },
+                {
+                    "date": 1660999153335,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,5 +19,11 @@\n const app = express()\n \n app.listen(3001, () => {\n     console.log('Server is listening on port 3001')\n-})\n\\ No newline at end of file\n+})\n+\n+require('dotenv').config()\n+const mysql = require('mysql2')\n+    // const connection = mysql.createConnection(process.env.DATABASE_URL)\n+console.log('Connected to PlanetScale!')\n+connection.end()\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1660999169055,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import dotenv from 'dotenv'\n import express from 'express'\n-import mysql from 'mysql2'\n+// import mysql from 'mysql2'\n \n \n // const mysql2 = require('mysql2')\n \n"
+                },
+                {
+                    "date": 1660999185367,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,13 @@\n // import mysql from 'mysql2'\n \n \n // const mysql2 = require('mysql2')\n+require('dotenv').config()\n+const mysql = require('mysql2')\n+    // const connection = mysql.createConnection(process.env.DATABASE_URL)\n+console.log('Connected to PlanetScale!')\n+connection.end()\n \n \n const PORT = process.env.PORT || 3000\n \n@@ -19,11 +24,5 @@\n const app = express()\n \n app.listen(3001, () => {\n     console.log('Server is listening on port 3001')\n-})\n-\n-require('dotenv').config()\n-const mysql = require('mysql2')\n-    // const connection = mysql.createConnection(process.env.DATABASE_URL)\n-console.log('Connected to PlanetScale!')\n-connection.end()\n\\ No newline at end of file\n+})\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1660999191430,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,15 +3,11 @@\n // import mysql from 'mysql2'\n \n \n // const mysql2 = require('mysql2')\n-require('dotenv').config()\n-const mysql = require('mysql2')\n-    // const connection = mysql.createConnection(process.env.DATABASE_URL)\n-console.log('Connected to PlanetScale!')\n-connection.end()\n \n \n+\n const PORT = process.env.PORT || 3000\n \n \n const connection = mysql.createConnection(process.env.DATABASE_URL)\n"
+                },
+                {
+                    "date": 1660999196489,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import dotenv from 'dotenv'\n import express from 'express'\n-// import mysql from 'mysql2'\n+import mysql from 'mysql2'\n \n \n // const mysql2 = require('mysql2')\n \n"
+                },
+                {
+                    "date": 1660999277254,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n \n const connection = mysql.createConnection(process.env.DATABASE_URL)\n console.log('connected to pscale db!')\n \n-connection.end()\n+// connection.end()\n \n dotenv.config()\n \n const app = express()\n"
+                },
+                {
+                    "date": 1660999297147,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,19 +2,16 @@\n import express from 'express'\n import mysql from 'mysql2'\n \n \n-// const mysql2 = require('mysql2')\n \n-\n-\n const PORT = process.env.PORT || 3000\n \n \n const connection = mysql.createConnection(process.env.DATABASE_URL)\n console.log('connected to pscale db!')\n \n-// connection.end()\n+connection.end()\n \n dotenv.config()\n \n const app = express()\n"
+                }
+            ],
+            "date": 1660998792748,
+            "name": "Commit-0",
+            "content": "import dotenv from 'dotenv'\nimport express from 'express'\nimport mysql from 'mysql2'\nX\n\nconst PORT = process.env.PORT || 3000\n\n\nconst connection = mysql.createConnection(process.env.DATABASE_URL)\nconsole.log('connected to pscale db!')\n\nconnection.end()\n\ndotenv.config()\n\nconst app = express()\n\napp.listen(3001, () => {\n    console.log('Server is listening on port 3001')\n})"
+        }
+    ]
+}

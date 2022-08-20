@@ -1,0 +1,26 @@
+{
+    "sourceFile": "frontend/package.json",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1661000243022,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1661000649916,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n     \"version\": \"0.1.0\",\n     \"proxy\": \"https://localhost:3000/\",\n     \"type\": \"module\",\n     \"scripts\": {\n-        \"dev\": \"vite\",\n+        \"dev\": \"vite dev\",\n         \"build\": \"tsc && vite build\",\n         \"preview\": \"vite preview\"\n     },\n     \"dependencies\": {\n"
+                },
+                {
+                    "date": 1661000759292,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,8 +9,9 @@\n         \"build\": \"tsc && vite build\",\n         \"preview\": \"vite preview\"\n     },\n     \"dependencies\": {\n+        \"concurrently\": \"^7.3.0\",\n         \"mobx\": \"^6.6.1\",\n         \"react\": \"^18.2.0\",\n         \"react-dom\": \"^18.2.0\"\n     },\n"
+                }
+            ],
+            "date": 1661000243022,
+            "name": "Commit-0",
+            "content": "{\n    \"name\": \"frontend\",\n    \"private\": true,\n    \"version\": \"0.1.0\",\n    \"proxy\": \"https://localhost:3000/\",\n    \"type\": \"module\",\n    \"scripts\": {\n        \"dev\": \"vite\",\n        \"build\": \"tsc && vite build\",\n        \"preview\": \"vite preview\"\n    },\n    \"dependencies\": {\n        \"mobx\": \"^6.6.1\",\n        \"react\": \"^18.2.0\",\n        \"react-dom\": \"^18.2.0\"\n    },\n    \"devDependencies\": {\n        \"@types/react\": \"^18.0.17\",\n        \"@types/react-dom\": \"^18.0.6\",\n        \"@vitejs/plugin-react\": \"^2.0.1\",\n        \"tailwind\": \"^4.0.0\",\n        \"tailwindcss\": \"^3.1.8\",\n        \"typescript\": \"^4.6.4\",\n        \"vite\": \"^3.0.7\"\n    }\n}"
+        }
+    ]
+}

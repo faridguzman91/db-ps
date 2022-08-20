@@ -5,10 +5,12 @@
     "main": "server.js",
     "type": "module",
     "scripts": {
-        "start": " node backend/server.js",
+        "dev": "concurrently \"npm run server\" \"npm run client\"",
+        "start": "node backend/server.js",
         "server": "nodemon backend/server.js",
-        "client": "vite frontend",
-        "dev": "concurrently \"npm run server\" \"npm run client\""
+        "client": "vite",
+        "build": "tsc && vite build",
+        "preview": "vite preview"
     },
     "keywords": [],
     "author": "faridguzman91",

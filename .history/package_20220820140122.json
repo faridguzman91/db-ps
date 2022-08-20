@@ -2,12 +2,12 @@
     "name": "db-ps",
     "version": "1.0.0",
     "description": "david bade -official",
-    "main": "server.js",
-    "type": "module",
+    "main": "index.js",
     "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
         "start": " node backend/server.js",
         "server": "nodemon backend/server.js",
-        "client": "vite frontend",
+        "client": "vite",
         "dev": "concurrently \"npm run server\" \"npm run client\""
     },
     "keywords": [],

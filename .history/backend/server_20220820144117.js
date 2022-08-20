@@ -3,6 +3,9 @@ import express from 'express'
 import mysql from 'mysql2'
 
 
+// const mysql2 = require('mysql2')
+
+
 
 const PORT = process.env.PORT || 3000
 
@@ -10,7 +13,7 @@ const PORT = process.env.PORT || 3000
 const connection = mysql.createConnection(process.env.DATABASE_URL)
 console.log('connected to pscale db!')
 
-connection.end()
+// connection.end()
 
 dotenv.config()
 

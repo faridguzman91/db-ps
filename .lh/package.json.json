@@ -1,0 +1,86 @@
+{
+    "sourceFile": "package.json",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 17,
+            "patches": [
+                {
+                    "date": 1660998886870,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1660999482746,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n     \"scripts\": {\n         \"test\": \"echo \\\"Error: no test specified\\\" && exit 1\",\n         \"start\": \" node backend/server.js\",\n         \"server\": \"nodemon backend/server.js\",\n-        \"client\": \"vite\",\n+        \"client\": \"vite dev/client\",\n         \"dev\": \"concurrently \\\"npm run server\\\" \\\"npm run client\\\"\"\n     },\n     \"keywords\": [],\n     \"author\": \"faridguzman91\",\n"
+                },
+                {
+                    "date": 1660999514857,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n     \"scripts\": {\n         \"test\": \"echo \\\"Error: no test specified\\\" && exit 1\",\n         \"start\": \" node backend/server.js\",\n         \"server\": \"nodemon backend/server.js\",\n-        \"client\": \"vite dev/client\",\n+        \"client\": \"dev\",\n         \"dev\": \"concurrently \\\"npm run server\\\" \\\"npm run client\\\"\"\n     },\n     \"keywords\": [],\n     \"author\": \"faridguzman91\",\n"
+                },
+                {
+                    "date": 1660999597930,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n     \"scripts\": {\n         \"test\": \"echo \\\"Error: no test specified\\\" && exit 1\",\n         \"start\": \" node backend/server.js\",\n         \"server\": \"nodemon backend/server.js\",\n-        \"client\": \"dev\",\n+        \"client\": \"vite\",\n         \"dev\": \"concurrently \\\"npm run server\\\" \\\"npm run client\\\"\"\n     },\n     \"keywords\": [],\n     \"author\": \"faridguzman91\",\n"
+                },
+                {
+                    "date": 1660999866908,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n     \"scripts\": {\n         \"test\": \"echo \\\"Error: no test specified\\\" && exit 1\",\n         \"start\": \" node backend/server.js\",\n         \"server\": \"nodemon backend/server.js\",\n-        \"client\": \"vite\",\n+        \"client\": \"vite --prefix frontend\",\n         \"dev\": \"concurrently \\\"npm run server\\\" \\\"npm run client\\\"\"\n     },\n     \"keywords\": [],\n     \"author\": \"faridguzman91\",\n"
+                },
+                {
+                    "date": 1660999886412,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n     \"scripts\": {\n         \"test\": \"echo \\\"Error: no test specified\\\" && exit 1\",\n         \"start\": \" node backend/server.js\",\n         \"server\": \"nodemon backend/server.js\",\n-        \"client\": \"vite --prefix frontend\",\n+        \"client\": \"dev --prefix frontend\",\n         \"dev\": \"concurrently \\\"npm run server\\\" \\\"npm run client\\\"\"\n     },\n     \"keywords\": [],\n     \"author\": \"faridguzman91\",\n"
+                },
+                {
+                    "date": 1660999905742,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n     \"scripts\": {\n         \"test\": \"echo \\\"Error: no test specified\\\" && exit 1\",\n         \"start\": \" node backend/server.js\",\n         \"server\": \"nodemon backend/server.js\",\n-        \"client\": \"dev --prefix frontend\",\n+        \"client\": \"vite --prefix frontend\",\n         \"dev\": \"concurrently \\\"npm run server\\\" \\\"npm run client\\\"\"\n     },\n     \"keywords\": [],\n     \"author\": \"faridguzman91\",\n"
+                },
+                {
+                    "date": 1660999965701,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n {\n     \"name\": \"db-ps\",\n     \"version\": \"1.0.0\",\n     \"description\": \"david bade -official\",\n-    \"main\": \"index.js\",\n+    \"main\": \"server.js\",\n     \"type\": \"module\",\n     \"scripts\": {\n         \"test\": \"echo \\\"Error: no test specified\\\" && exit 1\",\n         \"start\": \" node backend/server.js\",\n"
+                },
+                {
+                    "date": 1660999991469,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,8 @@\n     \"description\": \"david bade -official\",\n     \"main\": \"server.js\",\n     \"type\": \"module\",\n     \"scripts\": {\n-        \"test\": \"echo \\\"Error: no test specified\\\" && exit 1\",\n         \"start\": \" node backend/server.js\",\n         \"server\": \"nodemon backend/server.js\",\n         \"client\": \"vite --prefix frontend\",\n         \"dev\": \"concurrently \\\"npm run server\\\" \\\"npm run client\\\"\"\n"
+                },
+                {
+                    "date": 1661000120911,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n     \"type\": \"module\",\n     \"scripts\": {\n         \"start\": \" node backend/server.js\",\n         \"server\": \"nodemon backend/server.js\",\n-        \"client\": \"vite --prefix frontend\",\n+        \"client\": \"dev\",\n         \"dev\": \"concurrently \\\"npm run server\\\" \\\"npm run client\\\"\"\n     },\n     \"keywords\": [],\n     \"author\": \"faridguzman91\",\n"
+                },
+                {
+                    "date": 1661000291853,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n     \"type\": \"module\",\n     \"scripts\": {\n         \"start\": \" node backend/server.js\",\n         \"server\": \"nodemon backend/server.js\",\n-        \"client\": \"dev\",\n+        \"client\": \"vite --prefix frontend\",\n         \"dev\": \"concurrently \\\"npm run server\\\" \\\"npm run client\\\"\"\n     },\n     \"keywords\": [],\n     \"author\": \"faridguzman91\",\n"
+                },
+                {
+                    "date": 1661000445554,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n     \"type\": \"module\",\n     \"scripts\": {\n         \"start\": \" node backend/server.js\",\n         \"server\": \"nodemon backend/server.js\",\n-        \"client\": \"vite --prefix frontend\",\n+        \"client\": \"vite\",\n         \"dev\": \"concurrently \\\"npm run server\\\" \\\"npm run client\\\"\"\n     },\n     \"keywords\": [],\n     \"author\": \"faridguzman91\",\n"
+                },
+                {
+                    "date": 1661000579384,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,12 +4,14 @@\n     \"description\": \"david bade -official\",\n     \"main\": \"server.js\",\n     \"type\": \"module\",\n     \"scripts\": {\n-        \"start\": \" node backend/server.js\",\n+        \"dev\": \"concurrently \\\"npm run server\\\" \\\"npm run client\\\"\",\n+        \"start\": \"node backend/server.js\",\n         \"server\": \"nodemon backend/server.js\",\n         \"client\": \"vite\",\n-        \"dev\": \"concurrently \\\"npm run server\\\" \\\"npm run client\\\"\"\n+        \"build\": \"tsc && vite build\",\n+        \"preview\": \"vite preview\"\n     },\n     \"keywords\": [],\n     \"author\": \"faridguzman91\",\n     \"license\": \"ISC\",\n"
+                },
+                {
+                    "date": 1661000651009,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n     \"scripts\": {\n         \"dev\": \"concurrently \\\"npm run server\\\" \\\"npm run client\\\"\",\n         \"start\": \"node backend/server.js\",\n         \"server\": \"nodemon backend/server.js\",\n-        \"client\": \"vite\",\n+        \"client\": \"vite dev\",\n         \"build\": \"tsc && vite build\",\n         \"preview\": \"vite preview\"\n     },\n     \"keywords\": [],\n"
+                },
+                {
+                    "date": 1661000660509,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,14 +4,12 @@\n     \"description\": \"david bade -official\",\n     \"main\": \"server.js\",\n     \"type\": \"module\",\n     \"scripts\": {\n-        \"dev\": \"concurrently \\\"npm run server\\\" \\\"npm run client\\\"\",\n-        \"start\": \"node backend/server.js\",\n+        \"start\": \" node backend/server.js\",\n         \"server\": \"nodemon backend/server.js\",\n-        \"client\": \"vite dev\",\n-        \"build\": \"tsc && vite build\",\n-        \"preview\": \"vite preview\"\n+        \"client\": \"vite\",\n+        \"dev\": \"concurrently \\\"npm run server\\\" \\\"npm run client\\\"\"\n     },\n     \"keywords\": [],\n     \"author\": \"faridguzman91\",\n     \"license\": \"ISC\",\n"
+                },
+                {
+                    "date": 1661001158141,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n     \"type\": \"module\",\n     \"scripts\": {\n         \"start\": \" node backend/server.js\",\n         \"server\": \"nodemon backend/server.js\",\n-        \"client\": \"vite\",\n+        \"client\": \"vite --prefix fronend\",\n         \"dev\": \"concurrently \\\"npm run server\\\" \\\"npm run client\\\"\"\n     },\n     \"keywords\": [],\n     \"author\": \"faridguzman91\",\n"
+                },
+                {
+                    "date": 1661001174273,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n     \"type\": \"module\",\n     \"scripts\": {\n         \"start\": \" node backend/server.js\",\n         \"server\": \"nodemon backend/server.js\",\n-        \"client\": \"vite --prefix fronend\",\n+        \"client\": \"vite --prefix frontend\",\n         \"dev\": \"concurrently \\\"npm run server\\\" \\\"npm run client\\\"\"\n     },\n     \"keywords\": [],\n     \"author\": \"faridguzman91\",\n"
+                },
+                {
+                    "date": 1661001203455,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n     \"type\": \"module\",\n     \"scripts\": {\n         \"start\": \" node backend/server.js\",\n         \"server\": \"nodemon backend/server.js\",\n-        \"client\": \"vite --prefix frontend\",\n+        \"client\": \"vite frontend\",\n         \"dev\": \"concurrently \\\"npm run server\\\" \\\"npm run client\\\"\"\n     },\n     \"keywords\": [],\n     \"author\": \"faridguzman91\",\n"
+                }
+            ],
+            "date": 1660998886870,
+            "name": "Commit-0",
+            "content": "{\n    \"name\": \"db-ps\",\n    \"version\": \"1.0.0\",\n    \"description\": \"david bade -official\",\n    \"main\": \"index.js\",\n    \"type\": \"module\",\n    \"scripts\": {\n        \"test\": \"echo \\\"Error: no test specified\\\" && exit 1\",\n        \"start\": \" node backend/server.js\",\n        \"server\": \"nodemon backend/server.js\",\n        \"client\": \"vite\",\n        \"dev\": \"concurrently \\\"npm run server\\\" \\\"npm run client\\\"\"\n    },\n    \"keywords\": [],\n    \"author\": \"faridguzman91\",\n    \"license\": \"ISC\",\n    \"dependencies\": {\n        \"axios\": \"^0.27.2\",\n        \"bcrypt\": \"^5.0.1\",\n        \"bcryptjs\": \"^2.4.3\",\n        \"colors\": \"^1.4.0\",\n        \"concurrently\": \"^7.3.0\",\n        \"dotenv\": \"^16.0.1\",\n        \"express\": \"^4.18.1\",\n        \"jsonwebtoken\": \"^8.5.1\",\n        \"mysql2\": \"^2.3.3\",\n        \"nodemon\": \"^2.0.19\"\n    }\n}"
+        }
+    ]
+}
