@@ -41,9 +41,9 @@ function UploadClient() {
                         </h1>
                         <p className="font-ptmono text-black py-2">Login to upload art</p>
 
-                        <div className="form-control w-full max-w-xs justify-between flex-start flex-wrap ">
-                            <div className="mb-2 py-2">
-                                <label className="label mr-2 px-2">
+                        <div className="form-control w-full max-w-xs justify-between flex flex-wrap ">
+                            <div className="mr-2">
+                                <label className="label">
                                     <span className="label-text px-2 mr-2">Email</span>
                                 </label>
 

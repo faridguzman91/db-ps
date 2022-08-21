@@ -43,7 +43,7 @@ function UploadClient() {
 
                         <div className="form-control w-full max-w-xs justify-between flex-start flex-wrap ">
                             <div className="mb-2 py-2">
-                                <label className="label mr-2 px-2">
+                                <label className="label">
                                     <span className="label-text px-2 mr-2">Email</span>
                                 </label>
 
