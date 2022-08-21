@@ -5,8 +5,12 @@ import UploadPageContainer from '../components/containers/upload/upload-containe
 
 function UploadClient() {
     return (
-        <div className="hero min-h-screen">
-            <div className="hero-overlay bg-opacity-60"></div>
+
+
+        <div className="hero min-h-screen" style={{
+            backgroundImage: `url(${require('../assets/images/background.jpg')})`,
+        }}>
+            < div className="hero-overlay bg-opacity-60" ></ >
             <div className="hero-content text-center text-neutral-content">
                 <div className="max-w-md">
                     <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
@@ -14,9 +18,8 @@ function UploadClient() {
                     <button className="btn btn-primary">Get Started</button>
                 </div>
             </div>
-        </div>
+        </div >
     )
 }
-
 
 export default UploadClient

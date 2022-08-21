@@ -1,11 +1,11 @@
 import React from 'react'
 import UploadPageContainer from '../components/containers/upload/upload-container'
 
-
-
 function UploadClient() {
     return (
-        <div className="hero min-h-screen">
+
+
+        <div className="hero min-h-screen" style="background-image: url(https://placeimg.com/1000/800/arch);">
             <div className="hero-overlay bg-opacity-60"></div>
             <div className="hero-content text-center text-neutral-content">
                 <div className="max-w-md">
@@ -17,6 +17,5 @@ function UploadClient() {
         </div>
     )
 }
-
 
 export default UploadClient

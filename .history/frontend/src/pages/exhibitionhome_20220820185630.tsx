@@ -1,6 +1,6 @@
 import React from 'react'
 
-function ExhibitionsHomePage() {
+function ExhibitionsHopePage() {
     return (
         <div>
 
@@ -8,4 +8,4 @@ function ExhibitionsHomePage() {
     )
 }
 
-export default ExhibitionsHomePage
+export default ExhibitionsHopePage

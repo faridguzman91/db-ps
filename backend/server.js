@@ -5,15 +5,12 @@ import mysql from 'mysql2';
 
 dotenv.config();
 
-
-
 const PORT = process.env.port || 5000
 
 const connectPscale = mysql.createConnection(process.env.DATABASE_URL)
 console.log('Connected to Pscale!')
-    // const {errorHandler} = require('.middleware/errorMiddleware')
-    // const connection = require("mysql2/typings/mysql/lib/Connection")
-    // connection.end()
+
+// make sure the .env has the current username and password to avoid isServer issue
 
 const app = express();
 
