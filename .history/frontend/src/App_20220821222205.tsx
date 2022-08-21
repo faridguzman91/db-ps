@@ -2,7 +2,6 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./input.css";
 import BioPage from "./pages/bio";
 import BlogPage from "./pages/blog";
-import ContactPage from "./pages/contact";
 import CVPage from "./pages/cv";
 import ExhibitionsHomePage from "./pages/exhibitionhome";
 import GalleryPage from "./pages/gallery";
@@ -23,8 +22,6 @@ function App(): JSX.Element {
         <Route path="/exhibitions" element={<ExhibitionsHomePage />} />
         <Route path="/gallery" element={<GalleryPage />} />
         <Route path="/uploadclient" element={<UploadClient />} />
-        <Route path="/contact" element={<ContactPage />} />
-
       </Routes>
     </div>
   );

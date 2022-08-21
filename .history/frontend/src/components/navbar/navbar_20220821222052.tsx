@@ -30,8 +30,8 @@ function Navbar() {
                         </ul>
                     </li>
                     <li><Link to='/cv'>CV</Link></li>
-                    <li><Link to='/blog'>Blog</Link></li>
-                    <li><Link to='/contact'>Contact</Link></li>
+                    <li><a>Blog</a></li>
+                    <li><a>Contact</a></li>
                 </ul>
             </div>
             <div className="flex-none">
