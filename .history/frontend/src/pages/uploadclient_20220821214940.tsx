@@ -23,8 +23,8 @@ function UploadClient() {
                     <div className="card-body">
                         <h1 className="card-title font-ptmono py-2">Login David Bade</h1>
                         <p className="font-ptmono py-2">Login to upload art</p>
-                        <div className="card-actions justify-end py-2">
-                            <button className="btn btn-primary font-ptmono py-2">Login!</button>
+                        <div className="card-actions justify-end">
+                            <button className="btn btn-primary font-ptmono">Login!</button>
                         </div>
                     </div>
                 </div>
