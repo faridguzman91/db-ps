@@ -11,7 +11,7 @@ function UploadClient() {
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
-            opacity: '0.8'
+            opacity: '0.1'
         }}>
             <div className="hero-overlay bg-opacity-100" ></div>
             <div className="hero-content text-center text-neutral-content">
