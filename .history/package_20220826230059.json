@@ -8,7 +8,8 @@
         "start": " node backend/server.js",
         "server": "nodemon backend/server.js",
         "client": "vite frontend",
-        "dev": "concurrently \"npm run server\" \"npm run client\""
+        "dev": "concurrently \"npm run server\" \"npm run client\"",
+        "build": "vite build"
     },
     "keywords": [],
     "author": "faridguzman91",
