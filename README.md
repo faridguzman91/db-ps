@@ -5,6 +5,8 @@
 
 <br>
 
-# davidbade website on prisma, planetscale three, gsap, and typescript
+# davidbade website 
+<br>
+on prisma, planetscale three, gsap, and typescript
 
 <br>
