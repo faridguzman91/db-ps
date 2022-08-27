@@ -9,7 +9,7 @@
         "server": "nodemon backend/server.js",
         "client": "vite frontend",
         "dev": "concurrently \"npm run server\" \"npm run client\"",
-        "build": "vite build frontend"
+        "build": "dev"
     },
     "keywords": [],
     "author": "faridguzman91",

@@ -7,7 +7,7 @@ export default defineConfig({
   build: {
     manifest: true,
     rollupOptions: {
-      input: "backend/server.js",
+      input: "../backend/server.js",
     },
   },
 });
