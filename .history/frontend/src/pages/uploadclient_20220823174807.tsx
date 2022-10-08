@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import React from "react";
 import UploadHeroPic from "../assets/david-painting.jpg";
 import UploadPageContainer from "../components/containers/upload/upload-container";
+
 const picWidth: number = 600;
 const picHeight: number = 400;
 
@@ -26,7 +27,6 @@ function UploadClient() {
                 <motion.div
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
-                    animate={{ opacity: 1, y: -20 }}
                 >
 
                     <div className="card w-100 glass">
@@ -70,7 +70,7 @@ function UploadClient() {
                                         type="password"
                                         value="password"
                                         placeholder="Type password"
-                                        classN-ame="input input-bordered w-full max-w-xs"
+                                        className="input input-bordered w-full max-w-xs"
                                     />
                                 </div>
                             </div>

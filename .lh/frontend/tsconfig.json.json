@@ -1,0 +1,22 @@
+{
+    "sourceFile": "frontend/tsconfig.json",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1661626807176,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1661626861348,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n     \"esModuleInterop\": false,\n     \"allowSyntheticDefaultImports\": true,\n     \"strict\": true,\n     \"forceConsistentCasingInFileNames\": true,\n-    \"module\": \"ESNext\",\n+    \"module\": \"CommonJS\",\n     \"moduleResolution\": \"Node\",\n     \"resolveJsonModule\": true,\n     \"isolatedModules\": true,\n     \"noEmit\": true,\n"
+                }
+            ],
+            "date": 1661626807176,
+            "name": "Commit-0",
+            "content": "{\n  \"compilerOptions\": {\n    \"target\": \"ESNext\",\n    \"useDefineForClassFields\": true,\n    \"lib\": [\"DOM\", \"DOM.Iterable\", \"ESNext\"],\n    \"allowJs\": false,\n    \"skipLibCheck\": true,\n    \"esModuleInterop\": false,\n    \"allowSyntheticDefaultImports\": true,\n    \"strict\": true,\n    \"forceConsistentCasingInFileNames\": true,\n    \"module\": \"ESNext\",\n    \"moduleResolution\": \"Node\",\n    \"resolveJsonModule\": true,\n    \"isolatedModules\": true,\n    \"noEmit\": true,\n    \"jsx\": \"react-jsx\"\n  },\n  \"include\": [\"src\"],\n  \"references\": [{ \"path\": \"./tsconfig.node.json\" }]\n}\n"
+        }
+    ]
+}
