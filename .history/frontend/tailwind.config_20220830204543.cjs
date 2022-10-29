@@ -26,4 +26,4 @@ module.exports = {
 
 // if not watching and outputting dist css run
 // npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
-// in terminal, chanhe js to cjs
+// in terminal

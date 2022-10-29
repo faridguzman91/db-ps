@@ -2,6 +2,7 @@ import colors from 'colors';
 import dotenv from 'dotenv';
 import express from 'express';
 import mysql from 'mysql2';
+import sequelize from 'sequelize';
 
 
 
@@ -18,8 +19,4 @@ const app = express();
 
 app.listen(3001, () => {
     console.log('app listening')
-})
-
-app.get('/', (req, res) => {
-    res.send('Hello World')
 })

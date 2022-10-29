@@ -1,21 +1,46 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 generator client {
-  provider        = "mysql"
+  provider        = "prisma-client.js"
   previewFeatures = ["referentialIntegrity"]
 }
 
 datasource db {
-  provider             = "mysql"
-  url                  = env("DATABASE_URL")
-  referentialIntegrity = "prisma"
+  provider = "mysql"
+  url      = env("DATABASE_URL")
 }
 
-model Post {
-  id        Int      @id @default(autoincrement())
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-  title     String   @db.VarChar(255)
-  content   String
+model categories {
+  id   Int    @id @default(autoincrement())
+  name String @db.VarChar(255)
+}
+
+model images {
+  id          Int     @id @default(autoincrement())
+  name        String  @db.VarChar(255)
+  image_url   String? @db.VarChar(255)
+  category_id Int?
+
+  @@index([category_id], map: "category_id_idx")
+}
+
+model products {
+  id          Int     @id @default(autoincrement())
+  name        String  @db.VarChar(255)
+  image_url   String? @db.VarChar(255)
+  category_id Int?
+
+  @@index([category_id], map: "category_id_idx")
+}
+
+model text {
+  id          Int     @id @default(autoincrement())
+  name        String  @db.VarChar(255)
+  image_url   String? @db.VarChar(255)
+  category_id Int?
+
+  @@index([category_id], map: "category_id_idx")
+}
+
+model users {
+  id   Int    @id @default(autoincrement())
+  name String @db.VarChar(255)
 }

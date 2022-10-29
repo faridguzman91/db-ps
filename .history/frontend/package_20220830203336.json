@@ -3,7 +3,7 @@
     "private": true,
     "version": "0.1.0",
     "proxy": "https://localhost:3000/",
-    "type": "module",
+    "type": "modules",
     "scripts": {
         "dev": "vite dev",
         "build": "tsc && vite build",

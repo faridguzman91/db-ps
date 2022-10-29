@@ -1,6 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 // add the beginning of your app entry
-import { PrismaClient } from '@prisma/client';
 import 'vite/modulepreload-polyfill';
 import "./input.css";
 import BioPage from "./pages/bio";
@@ -11,15 +10,13 @@ import ExhibitionsHomePage from "./pages/exhibitionhome";
 import GalleryPage from "./pages/gallery";
 import HomePage from "./pages/home";
 import UploadClient from "./pages/uploadclient";
+import { PrismaClient } from '@prisma/client'
 
 const prisma = new PrismaClient()
 
 import Navbar from "./components/navbar/navbar";
 
-
-
 function App(): JSX.Element {
-
   return (
     <div className="App">
       <Navbar />
