@@ -5,7 +5,7 @@
 
 import express from 'express';
 import createError from 'http-errors';
-// import auth from './auth';
+import auth from './auth';
 
 const router = express.Router();
 
@@ -24,4 +24,4 @@ router.use((err, req, res, next) => {
 })
 
 
-module.exports = router;
+module.exports = routes;

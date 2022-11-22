@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 2,
+            "activePatchIndex": 3,
             "patches": [
                 {
                     "date": 1669143640226,
@@ -16,6 +16,10 @@
                 {
                     "date": 1669143716124,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -51,5 +51,7 @@\n         } catch (error) {\r\n             console.log(error);\r\n         }\r\n     }\r\n-}\n\\ No newline at end of file\n+}\r\n+\r\n+module.exports = AuthService;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1669144196456,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,11 +5,14 @@\n const prisma = new PrismaClient();\r\n \r\n require(\"dotenv\").config();\r\n \r\n-const bcrypt = require(\"bcrypt\");\r\n-const jwt = require(\"../utils/webtokens\");\r\n+// const bcrypt = require(\"bcrypt\");\r\n+// const jwt = require(\"../utils/webtokens\");\r\n \r\n+import bcrypt from \"bcrypt\";\r\n+import jwt from \"../utils/webtokens\";\r\n+\r\n class AuthService {\r\n     static async registerUser(req, res) {\r\n         const {\r\n             email,\r\n"
                 }
             ],
             "date": 1669143640226,

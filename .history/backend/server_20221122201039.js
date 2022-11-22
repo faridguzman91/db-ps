@@ -29,9 +29,6 @@ const pool = mysql.createPool({
 })
 
 
-// https://blog.logrocket.com/crafting-authentication-schemes-with-prisma-in-express/
-
-
 dotenv.config();
 
 const PORT = process.env.port || 5000

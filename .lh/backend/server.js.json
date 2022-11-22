@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 16,
+            "activePatchIndex": 18,
             "patches": [
                 {
                     "date": 1660998792748,
@@ -72,6 +72,14 @@
                 {
                     "date": 1669142041810,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,9 +41,5 @@\n const app = express();\r\n \r\n app.listen(PORT, () => {\r\n     console.log('app listening')\r\n-})\r\n-\r\n-app.get('/', (req, res) => {\r\n-    res.send('Hello World')\r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1669144239531,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n \r\n const PORT = process.env.port || 5000\r\n \r\n const connectPscale = mysql.createConnection(process.env.DATABASE_URL)\r\n-console.log('Connected to Pscale!')\r\n+console.log(connectPscale, 'Connected to Pscale!')\r\n \r\n // make sure the .env has the current username and password to avoid isServer issue\r\n \r\n const app = express();\r\n"
+                },
+                {
+                    "date": 1669153247893,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,8 +28,11 @@\n     database: process.env.DB_DATABASE,\r\n })\r\n \r\n \r\n+// https://blog.logrocket.com/crafting-authentication-schemes-with-prisma-in-express/\r\n+\r\n+\r\n dotenv.config();\r\n \r\n const PORT = process.env.port || 5000\r\n \r\n"
                 }
             ],
             "date": 1660998792748,
