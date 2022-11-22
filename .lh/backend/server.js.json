@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 13,
+            "activePatchIndex": 16,
             "patches": [
                 {
                     "date": 1660998792748,
@@ -60,6 +60,18 @@
                 {
                     "date": 1667847743217,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,5 @@\n+import colors from 'colors';\r\n import dotenv from 'dotenv';\r\n import express from 'express';\r\n import mysql from 'mysql2';\r\n \r\n"
+                },
+                {
+                    "date": 1669141952297,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,33 @@\n+import {\r\n+    PrismaClient\r\n+} from '@prisma/client';\r\n import colors from 'colors';\r\n import dotenv from 'dotenv';\r\n import express from 'express';\r\n import mysql from 'mysql2';\r\n \r\n+import bodyParser from 'body-parser';\r\n+import multer from 'multer';\r\n+import routes from './routes';\r\n \r\n+app.use(bodyParser.json());\r\n+app.use(bodyParser.urlencoded({\r\n+    extended: true\r\n+}));\r\n \r\n+app.use('/', routes);\r\n+const prisma = new PrismaClient()\r\n+\r\n+\r\n+const pool = mysql.createPool({\r\n+    host: process.env.DB_HOST,\r\n+    user: process.env.DB_USER,\r\n+    password: process.env.DB_PASSWORD,\r\n+    database: process.env.DB_DATABASE,\r\n+})\r\n+\r\n+\r\n dotenv.config();\r\n \r\n const PORT = process.env.port || 5000\r\n \r\n"
+                },
+                {
+                    "date": 1669141990592,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,8 +15,10 @@\n     extended: true\r\n }));\r\n \r\n app.use('/', routes);\r\n+\r\n+\r\n const prisma = new PrismaClient()\r\n \r\n \r\n const pool = mysql.createPool({\r\n@@ -37,9 +39,9 @@\n // make sure the .env has the current username and password to avoid isServer issue\r\n \r\n const app = express();\r\n \r\n-app.listen(3001, () => {\r\n+app.listen(PORT, () => {\r\n     console.log('app listening')\r\n })\r\n \r\n app.get('/', (req, res) => {\r\n"
+                },
+                {
+                    "date": 1669142041810,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,9 +41,5 @@\n const app = express();\r\n \r\n app.listen(PORT, () => {\r\n     console.log('app listening')\r\n-})\r\n-\r\n-app.get('/', (req, res) => {\r\n-    res.send('Hello World')\r\n })\n\\ No newline at end of file\n"
                 }
             ],
             "date": 1660998792748,

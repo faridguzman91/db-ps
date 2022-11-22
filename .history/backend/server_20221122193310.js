@@ -43,3 +43,7 @@ const app = express();
 app.listen(PORT, () => {
     console.log('app listening')
 })
+
+app.get('/', (req, res) => {
+    res.send('Hello World')
+})

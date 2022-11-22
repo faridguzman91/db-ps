@@ -1,0 +1,18 @@
+{
+    "sourceFile": "backend/routes/index.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1669142045475,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1669142045475,
+            "name": "Commit-0",
+            "content": "const express = require('express');\r\nconst router = express.Router();\r\nconst auth = require('./auth');\r\nconst createError = require('http-errors')\r\nrouter.get('/', (req, res) => {\r\n    res.send('Hello World!');\r\n});\r\nrouter.use('/auth', auth);\r\nrouter.use(async(req, res, next) => {\r\n    next(createError.NotFound('Route not Found'))\r\n})\r\nrouter.use((err, req, res, next) => {\r\n    res.status(err.status || 500).json({\r\n        status: false,\r\n        message: err.message\r\n    })\r\n})\r\nmodule.exports = router;"
+        }
+    ]
+}

@@ -6,18 +6,6 @@ import dotenv from 'dotenv';
 import express from 'express';
 import mysql from 'mysql2';
 
-import bodyParser from 'body-parser';
-import multer from 'multer';
-import routes from './routes';
-
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({
-    extended: true
-}));
-
-app.use('/', routes);
-
-
 const prisma = new PrismaClient()
 
 
@@ -40,6 +28,10 @@ console.log('Connected to Pscale!')
 
 const app = express();
 
-app.listen(PORT, () => {
+app.listen(3001, () => {
     console.log('app listening')
+})
+
+app.get('/', (req, res) => {
+    res.send('Hello World')
 })

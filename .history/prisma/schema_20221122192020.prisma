@@ -4,7 +4,7 @@ generator client {
 }
 
 datasource db {
-  provider = "mysql"
+  provider = "postgresql"
   url      = env("DATABASE_URL")
 }
 
@@ -19,7 +19,7 @@ model images {
   image_url   String? @db.VarChar(255)
   category_id Int?
 
-  @@index([category_id], map: "category_id_idx")
+  @@index([category_id])
 }
 
 model products {
@@ -28,7 +28,7 @@ model products {
   image_url   String? @db.VarChar(255)
   category_id Int?
 
-  @@index([category_id], map: "category_id_idx")
+  @@index([category_id])
 }
 
 model text {
@@ -37,17 +37,11 @@ model text {
   image_url   String? @db.VarChar(255)
   category_id Int?
 
-  @@index([category_id], map: "category_id_idx")
+  @@index([category_id])
 }
 
 model users {
-  id   Int    @id @default(autoincrement())
-  name String @db.VarChar(255)
-}
-
-model User {
-  id       Int     @id @default(autoincrement())
-  email    String  @unique
-  name     String?
-  password String?
+  id    Int     @id @default(autoincrement())
+  name  String? @db.VarChar(255)
+  email String? @db.VarChar(255)
 }

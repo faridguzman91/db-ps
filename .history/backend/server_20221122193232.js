@@ -16,8 +16,6 @@ app.use(bodyParser.urlencoded({
 }));
 
 app.use('/', routes);
-
-
 const prisma = new PrismaClient()
 
 
@@ -40,6 +38,10 @@ console.log('Connected to Pscale!')
 
 const app = express();
 
-app.listen(PORT, () => {
+app.listen(3001, () => {
     console.log('app listening')
+})
+
+app.get('/', (req, res) => {
+    res.send('Hello World')
 })

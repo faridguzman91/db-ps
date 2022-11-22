@@ -1,11 +1,12 @@
 generator client {
-  provider        = "prisma-client-js"
+  provider        = "prisma-client-cleajs"
   previewFeatures = ["referentialIntegrity"]
 }
 
 datasource db {
-  provider = "mysql"
-  url      = env("DATABASE_URL")
+  provider             = "mysql"
+  url                  = env("DATABASE_URL")
+  referentialIntegrity = "prisma"
 }
 
 model categories {
@@ -43,11 +44,4 @@ model text {
 model users {
   id   Int    @id @default(autoincrement())
   name String @db.VarChar(255)
-}
-
-model User {
-  id       Int     @id @default(autoincrement())
-  email    String  @unique
-  name     String?
-  password String?
 }

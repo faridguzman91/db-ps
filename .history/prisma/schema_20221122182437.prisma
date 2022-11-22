@@ -41,13 +41,7 @@ model text {
 }
 
 model users {
-  id   Int    @id @default(autoincrement())
-  name String @db.VarChar(255)
-}
-
-model User {
-  id       Int     @id @default(autoincrement())
-  email    String  @unique
-  name     String?
-  password String?
+  id    Int    @id @default(autoincrement())
+  name  String @db.VarChar(255)
+  email String @db.VarChar(255)
 }
