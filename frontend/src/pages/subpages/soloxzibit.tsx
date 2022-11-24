@@ -1,11 +1,7 @@
-import React from 'react'
+import React from "react";
 
 function SoloExhibitions() {
-    return (
-        <div>
-
-        </div>
-    )
+  return <div></div>;
 }
 
-export default SoloExhibitions
+export default SoloExhibitions;

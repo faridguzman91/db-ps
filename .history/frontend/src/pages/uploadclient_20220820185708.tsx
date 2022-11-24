@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 function UploadClient() {
-    return (
-        <div>UploadClient</div>
-    )
+  return <div>UploadClient</div>;
 }
 
-export default UploadClient
+export default UploadClient;

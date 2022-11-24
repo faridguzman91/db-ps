@@ -1,34 +1,34 @@
 {
-    "sourceFile": "backend/routes/index.js",
-    "activeCommit": 0,
-    "commits": [
+  "sourceFile": "backend/routes/index.js",
+  "activeCommit": 0,
+  "commits": [
+    {
+      "activePatchIndex": 4,
+      "patches": [
         {
-            "activePatchIndex": 4,
-            "patches": [
-                {
-                    "date": 1669142045475,
-                    "content": "Index: \n===================================================================\n--- \n+++ \n"
-                },
-                {
-                    "date": 1669144134314,
-                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,15 @@\n-const express = require('express');\r\n+// const express = require('express');\r\n+// const router = express.Router();\r\n+// const auth = require('./auth');\r\n+// const createError = require('http-errors')\r\n+\r\n+import express from 'express';\r\n+import createError from 'http-errors';\r\n+import auth from './auth';\r\n+\r\n const router = express.Router();\r\n-const auth = require('./auth');\r\n-const createError = require('http-errors')\r\n+\r\n router.get('/', (req, res) => {\r\n     res.send('Hello World!');\r\n });\r\n router.use('/auth', auth);\r\n"
-                },
-                {
-                    "date": 1669144283006,
-                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,5 +21,7 @@\n         status: false,\r\n         message: err.message\r\n     })\r\n })\r\n-module.exports = router;\n\\ No newline at end of file\n+\r\n+\r\n+module.exports = routes;\n\\ No newline at end of file\n"
-                },
-                {
-                    "date": 1669144355960,
-                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n // const createError = require('http-errors')\r\n \r\n import express from 'express';\r\n import createError from 'http-errors';\r\n-import auth from './auth';\r\n+// import auth from './auth';\r\n \r\n const router = express.Router();\r\n \r\n router.get('/', (req, res) => {\r\n"
-                },
-                {
-                    "date": 1669145080600,
-                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,5 +23,5 @@\n     })\r\n })\r\n \r\n \r\n-module.exports = routes;\n\\ No newline at end of file\n+module.exports = router;\n\\ No newline at end of file\n"
-                }
-            ],
-            "date": 1669142045475,
-            "name": "Commit-0",
-            "content": "const express = require('express');\r\nconst router = express.Router();\r\nconst auth = require('./auth');\r\nconst createError = require('http-errors')\r\nrouter.get('/', (req, res) => {\r\n    res.send('Hello World!');\r\n});\r\nrouter.use('/auth', auth);\r\nrouter.use(async(req, res, next) => {\r\n    next(createError.NotFound('Route not Found'))\r\n})\r\nrouter.use((err, req, res, next) => {\r\n    res.status(err.status || 500).json({\r\n        status: false,\r\n        message: err.message\r\n    })\r\n})\r\nmodule.exports = router;"
+          "date": 1669142045475,
+          "content": "Index: \n===================================================================\n--- \n+++ \n"
+        },
+        {
+          "date": 1669144134314,
+          "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,15 @@\n-const express = require('express');\r\n+// const express = require('express');\r\n+// const router = express.Router();\r\n+// const auth = require('./auth');\r\n+// const createError = require('http-errors')\r\n+\r\n+import express from 'express';\r\n+import createError from 'http-errors';\r\n+import auth from './auth';\r\n+\r\n const router = express.Router();\r\n-const auth = require('./auth');\r\n-const createError = require('http-errors')\r\n+\r\n router.get('/', (req, res) => {\r\n     res.send('Hello World!');\r\n });\r\n router.use('/auth', auth);\r\n"
+        },
+        {
+          "date": 1669144283006,
+          "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,5 +21,7 @@\n         status: false,\r\n         message: err.message\r\n     })\r\n })\r\n-module.exports = router;\n\\ No newline at end of file\n+\r\n+\r\n+module.exports = routes;\n\\ No newline at end of file\n"
+        },
+        {
+          "date": 1669144355960,
+          "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n // const createError = require('http-errors')\r\n \r\n import express from 'express';\r\n import createError from 'http-errors';\r\n-import auth from './auth';\r\n+// import auth from './auth';\r\n \r\n const router = express.Router();\r\n \r\n router.get('/', (req, res) => {\r\n"
+        },
+        {
+          "date": 1669145080600,
+          "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,5 +23,5 @@\n     })\r\n })\r\n \r\n \r\n-module.exports = routes;\n\\ No newline at end of file\n+module.exports = router;\n\\ No newline at end of file\n"
         }
-    ]
+      ],
+      "date": 1669142045475,
+      "name": "Commit-0",
+      "content": "const express = require('express');\r\nconst router = express.Router();\r\nconst auth = require('./auth');\r\nconst createError = require('http-errors')\r\nrouter.get('/', (req, res) => {\r\n    res.send('Hello World!');\r\n});\r\nrouter.use('/auth', auth);\r\nrouter.use(async(req, res, next) => {\r\n    next(createError.NotFound('Route not Found'))\r\n})\r\nrouter.use((err, req, res, next) => {\r\n    res.status(err.status || 500).json({\r\n        status: false,\r\n        message: err.message\r\n    })\r\n})\r\nmodule.exports = router;"
+    }
+  ]
 }

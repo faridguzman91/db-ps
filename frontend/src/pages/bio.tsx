@@ -1,11 +1,7 @@
-import React from 'react'
+import React from "react";
 
 function BioPage() {
-    return (
-        <div>
-
-        </div>
-    )
+  return <div></div>;
 }
 
-export default BioPage
+export default BioPage;

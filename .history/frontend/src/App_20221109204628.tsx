@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 // add the beginning of your app entry
-import 'vite/modulepreload-polyfill';
+import "vite/modulepreload-polyfill";
 import "./input.css";
 import BioPage from "./pages/bio";
 import BlogPage from "./pages/blog";
@@ -15,10 +15,7 @@ import UploadClient from "./pages/uploadclient";
 
 import Navbar from "./components/navbar/navbar";
 
-
-
 function App(): JSX.Element {
-
   return (
     <div className="App">
       <Navbar />
@@ -31,7 +28,6 @@ function App(): JSX.Element {
         <Route path="/gallery" element={<GalleryPage />} />
         <Route path="/uploadclient" element={<UploadClient />} />
         <Route path="/contact" element={<ContactPage />} />
-
       </Routes>
     </div>
   );

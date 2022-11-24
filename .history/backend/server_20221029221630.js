@@ -1,22 +1,20 @@
-import colors from 'colors';
-import dotenv from 'dotenv';
-import express from 'express';
-import mysql from 'mysql2';
-import sequelize from 'sequelize';
-
-
+import colors from "colors";
+import dotenv from "dotenv";
+import express from "express";
+import mysql from "mysql2";
+import sequelize from "sequelize";
 
 dotenv.config();
 
-const PORT = process.env.port || 5000
+const PORT = process.env.port || 5000;
 
-const connectPscale = mysql.createConnection(process.env.DATABASE_URL)
-console.log('Connected to Pscale!')
+const connectPscale = mysql.createConnection(process.env.DATABASE_URL);
+console.log("Connected to Pscale!");
 
 // make sure the .env has the current username and password to avoid isServer issue
 
 const app = express();
 
 app.listen(3001, () => {
-    console.log('app listening')
-})
+  console.log("app listening");
+});

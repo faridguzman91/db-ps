@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 function UploadPageContainer() {
-    return (
-        <div>UploadPageContainer</div>
-    )
+  return <div>UploadPageContainer</div>;
 }
 
-export default UploadPageContainer
+export default UploadPageContainer;

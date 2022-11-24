@@ -1,11 +1,7 @@
-import React from 'react'
+import React from "react";
 
 function ExhibitionsHomePage() {
-    return (
-        <div>
-
-        </div>
-    )
+  return <div></div>;
 }
 
-export default ExhibitionsHomePage
+export default ExhibitionsHomePage;

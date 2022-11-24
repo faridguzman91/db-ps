@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 function UploadLogin() {
-    return (
-        <div>UploadLogin</div>
-    )
+  return <div>UploadLogin</div>;
 }
 
-export default UploadLogin
+export default UploadLogin;
