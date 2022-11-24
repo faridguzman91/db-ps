@@ -15,8 +15,8 @@
     "author": "faridguzman91",
     "license": "ISC",
     "dependencies": {
-        "@prisma/client": "^4.6.0",
         "0g": "^0.0.9",
+        "@prisma/client": "^4.6.0",
         "axios": "^0.27.2",
         "bcrypt": "^5.0.1",
         "bcryptjs": "^2.4.3",
