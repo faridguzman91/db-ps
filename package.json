@@ -16,8 +16,8 @@
   "author": "faridguzman91",
   "license": "ISC",
   "dependencies": {
-    "@prisma/client": "^4.6.0",
     "0g": "^0.0.9",
+    "@prisma/client": "latest",
     "axios": "^0.27.2",
     "bcrypt": "^5.0.1",
     "bcryptjs": "^2.4.3",
@@ -40,7 +40,7 @@
     "husky": "^8.0.2",
     "lint-staged": "^13.0.3",
     "prettier": "2.8.0",
-    "prisma": "^4.6.0",
+    "prisma": "^4.10.1",
     "sequelize-cli": "^6.5.2"
   },
   "lint-staged": {

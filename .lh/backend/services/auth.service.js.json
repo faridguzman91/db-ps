@@ -3,7 +3,7 @@
   "activeCommit": 0,
   "commits": [
     {
-      "activePatchIndex": 3,
+      "activePatchIndex": 5,
       "patches": [
         {
           "date": 1669143640226,
@@ -20,6 +20,14 @@
         {
           "date": 1669144196456,
           "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,11 +5,14 @@\n const prisma = new PrismaClient();\r\n \r\n require(\"dotenv\").config();\r\n \r\n-const bcrypt = require(\"bcrypt\");\r\n-const jwt = require(\"../utils/webtokens\");\r\n+// const bcrypt = require(\"bcrypt\");\r\n+// const jwt = require(\"../utils/webtokens\");\r\n \r\n+import bcrypt from \"bcrypt\";\r\n+import jwt from \"../utils/webtokens\";\r\n+\r\n class AuthService {\r\n     static async registerUser(req, res) {\r\n         const {\r\n             email,\r\n"
+        },
+        {
+          "date": 1669328140696,
+          "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,60 +1,19 @@\n-import {\r\n-    PrismaClient\r\n-} from \"@prisma/client\";\r\n-\r\n-const prisma = new PrismaClient();\r\n-\r\n-require(\"dotenv\").config();\r\n-\r\n-// const bcrypt = require(\"bcrypt\");\r\n-// const jwt = require(\"../utils/webtokens\");\r\n-\r\n-import bcrypt from \"bcrypt\";\r\n-import jwt from \"../utils/webtokens\";\r\n-\r\n-class AuthService {\r\n-    static async registerUser(req, res) {\r\n-        const {\r\n-            email,\r\n-            password\r\n-        } = req.body;\r\n-        try {\r\n-            const user = await prisma.user.findUnique({\r\n-                where: {\r\n-                    email: email,\r\n-                },\r\n-            });\r\n-            if (user) {\r\n-                return res.status(409).json({\r\n-                    status: false,\r\n-                    message: \"User already exists\",\r\n-                });\r\n-            }\r\n-            const hashedPassword = await bcrypt.hash(password, 10);\r\n-            const newUser = await prisma.user.create({\r\n-                data: {\r\n-                    email: email,\r\n-                    password: hashedPassword,\r\n-                },\r\n-            });\r\n-            const accessToken = await jwt.signAccessToken({\r\n-                email: newUser.email,\r\n-            });\r\n-            const refreshToken = await jwt.signRefreshToken({\r\n-                email: newUser.email,\r\n-            });\r\n-            res.status(201).json({\r\n-                status: true,\r\n-                message: \"User created successfully\",\r\n-                data: {\r\n-                    accessToken,\r\n-                    refreshToken,\r\n-                },\r\n-            });\r\n-        } catch (error) {\r\n-            console.log(error);\r\n-        }\r\n-    }\r\n-}\r\n-\r\n+import {\n+    PrismaClient\n+} from \"@prisma/client\";\n+\n+const prisma = new PrismaClient();\n+\n+require(\"dotenv\").config();\n+\n+// const bcrypt = require(\"bcrypt\");\n+// const jwt = require(\"../utils/webtokens\");\n+\n+import bcrypt from \"bcrypt\";\n+import jwt from \"../utils/webtokens\";\n+\n+class AuthService {\n+\n+}\n+\n module.exports = AuthService;\n\\ No newline at end of file\n"
+        },
+        {
+          "date": 1669328150370,
+          "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,15 +5,24 @@\n const prisma = new PrismaClient();\n \n require(\"dotenv\").config();\n \n-// const bcrypt = require(\"bcrypt\");\n-// const jwt = require(\"../utils/webtokens\");\n \n import bcrypt from \"bcrypt\";\n import jwt from \"../utils/webtokens\";\n \n class AuthService {\n+    static async register(data) {\n+        const {\n+            email\n+        } = data;\n+        data.password = bcrypt.hashSync(data.password, 8);\n+        let user = prisma.user.create({\n+            data\n+        })\n+        data.accessToken = await jwt.signAccessToken(user);\n \n+        return data;\n+    }\n }\n \n module.exports = AuthService;\n\\ No newline at end of file\n"
         }
       ],
       "date": 1669143640226,

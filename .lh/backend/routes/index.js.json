@@ -3,7 +3,7 @@
   "activeCommit": 0,
   "commits": [
     {
-      "activePatchIndex": 4,
+      "activePatchIndex": 5,
       "patches": [
         {
           "date": 1669142045475,
@@ -24,6 +24,10 @@
         {
           "date": 1669145080600,
           "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,5 +23,5 @@\n     })\r\n })\r\n \r\n \r\n-module.exports = routes;\n\\ No newline at end of file\n+module.exports = router;\n\\ No newline at end of file\n"
+        },
+        {
+          "date": 1669327942242,
+          "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,27 +1,21 @@\n-// const express = require('express');\r\n-// const router = express.Router();\r\n-// const auth = require('./auth');\r\n-// const createError = require('http-errors')\r\n-\r\n-import express from 'express';\r\n-import createError from 'http-errors';\r\n-// import auth from './auth';\r\n-\r\n-const router = express.Router();\r\n-\r\n-router.get('/', (req, res) => {\r\n-    res.send('Hello World!');\r\n-});\r\n-router.use('/auth', auth);\r\n-router.use(async(req, res, next) => {\r\n-    next(createError.NotFound('Route not Found'))\r\n-})\r\n-router.use((err, req, res, next) => {\r\n-    res.status(err.status || 500).json({\r\n-        status: false,\r\n-        message: err.message\r\n-    })\r\n-})\r\n-\r\n-\r\n+import express from \"express\";\n+import createError from \"http-errors\";\n+import auth from './auth';\n+\n+const router = express.Router();\n+\n+router.get(\"/\", (req, res) => {\n+    res.send(\"Hello World!\");\n+});\n+router.use(\"/auth\", auth);\n+router.use(async(req, res, next) => {\n+    next(createError.NotFound(\"Route not Found\"));\n+});\n+router.use((err, req, res, next) => {\n+    res.status(err.status || 500).json({\n+        status: false,\n+        message: err.message,\n+    });\n+});\n+\n module.exports = router;\n\\ No newline at end of file\n"
         }
       ],
       "date": 1669142045475,

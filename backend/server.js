@@ -6,14 +6,10 @@ import mysql from "mysql2";
 
 import bodyParser from "body-parser";
 import multer from "multer";
-import routes from "./routes";
 
-app.use(bodyParser.json());
-app.use(
-  bodyParser.urlencoded({
-    extended: true,
-  })
-);
+import routes from "./routes/index.js";
+
+router.get("/", auth, user.all);
 
 app.use("/", routes);
 

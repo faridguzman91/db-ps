@@ -4,51 +4,45 @@ const prisma = new PrismaClient();
 
 require("dotenv").config();
 
-// const bcrypt = require("bcrypt");
-// const jwt = require("../utils/webtokens");
+import bcrypt from "bcryptjs";
 
-import bcrypt from "bcrypt";
 import jwt from "../utils/webtokens";
 
 class AuthService {
-  static async registerUser(req, res) {
-    const { email, password } = req.body;
-    try {
-      const user = await prisma.user.findUnique({
-        where: {
-          email: email,
-        },
-      });
-      if (user) {
-        return res.status(409).json({
-          status: false,
-          message: "User already exists",
-        });
-      }
-      const hashedPassword = await bcrypt.hash(password, 10);
-      const newUser = await prisma.user.create({
-        data: {
-          email: email,
-          password: hashedPassword,
-        },
-      });
-      const accessToken = await jwt.signAccessToken({
-        email: newUser.email,
-      });
-      const refreshToken = await jwt.signRefreshToken({
-        email: newUser.email,
-      });
-      res.status(201).json({
-        status: true,
-        message: "User created successfully",
-        data: {
-          accessToken,
-          refreshToken,
-        },
-      });
-    } catch (error) {
-      console.log(error);
+  static async register(data) {
+    const { email } = data;
+    data.password = bcrypt.hashSync(data.password, 8);
+    let user = prisma.user.create({
+      data,
+    });
+    data.accessToken = await jwt.signAccessToken(user);
+
+    return data;
+  }
+
+  static async login(data) {
+    const { email, password } = data;
+    const user = await prisma.user.findUnique({
+      where: {
+        email,
+      },
+    });
+    if (!user) {
+      throw createError.NotFound("User not registered");
     }
+    const checkPassword = bcrypt.compareSync(password, user.password);
+    if (!checkPassword)
+      throw createError.Unauthorized("Email address or password not valid");
+    delete user.password;
+    const accessToken = await jwt.signAccessToken(user);
+    return {
+      ...user,
+      accessToken,
+    };
+  }
+  static async all() {
+    const allUsers = await prisma.user.findMany();
+    return allUsers;
   }
 }
 

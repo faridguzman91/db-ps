@@ -1,11 +1,6 @@
-// const express = require('express');
-// const router = express.Router();
-// const auth = require('./auth');
-// const createError = require('http-errors')
-
 import express from "express";
 import createError from "http-errors";
-// import auth from './auth';
+import auth from "./auth";
 
 const router = express.Router();
 

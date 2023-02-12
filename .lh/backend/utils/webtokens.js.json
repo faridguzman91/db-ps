@@ -3,11 +3,23 @@
   "activeCommit": 0,
   "commits": [
     {
-      "activePatchIndex": 0,
+      "activePatchIndex": 3,
       "patches": [
         {
           "date": 1669142478673,
           "content": "Index: \n===================================================================\n--- \n+++ \n"
+        },
+        {
+          "date": 1669328075893,
+          "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,41 +1,13 @@\n-import {\r\n-    HttpError\r\n-} from 'http-errors';\r\n-import jwt from 'jsonwebtoken';\r\n-\r\n-import dotenv from 'dotenv';\r\n-\r\n-const accessTokenSecret = process.env.ACCESS_TOKEN_SECRET\r\n-module.exports = {\r\n-    signAccessToken(payload) {\r\n-        return new Promise((resolve, reject) => {\r\n-            const secret = accessTokenSecret\r\n-            const options = {\r\n-                expiresIn: '1h',\r\n-                issuer: 'localhost:5000',\r\n-                audience: payload.email\r\n-            }\r\n-            jwt.sign(payload, secret, options, (err, token) => {\r\n-                if (err) {\r\n-                    console.log(err.message)\r\n-                    reject(err)\r\n-                }\r\n-                resolve(token)\r\n-            })\r\n-        })\r\n-    },\r\n-    verifyAccessToken(req, res, next) {\r\n-        if (!req.headers['authorization']) return next(createError.Unauthorized())\r\n-        const authHeader = req.headers['authorization']\r\n-        const bearerToken = authHeader.split(' ')\r\n-        const token = bearerToken[1]\r\n-        jwt.verify(token, accessTokenSecret, (err, payload) => {\r\n-            if (err) {\r\n-                const message = err.name === 'JsonWebToken Error' ? 'Unauthorized' : err.message\r\n-                return next(createError.Unauthorized(message))\r\n-            }\r\n-            req.payload = payload\r\n-            next()\r\n-        })\r\n-    }\r\n-}\n\\ No newline at end of file\n+import {\n+    HttpError\n+} from \"http-errors\";\n+import jwt from \"jsonwebtoken\";\n+\n+import dotenv from \"dotenv\";\n+\n+const accessTokenSecret = process.env.ACCESS_TOKEN_SECRET;\n+module.exports = {\n+    signAccessToken(payload) {\n+\n+    }\n+};\n\\ No newline at end of file\n"
+        },
+        {
+          "date": 1669328084692,
+          "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,7 +7,7 @@\n \n const accessTokenSecret = process.env.ACCESS_TOKEN_SECRET;\n module.exports = {\n     signAccessToken(payload) {\n-\n+        retr\n     }\n };\n\\ No newline at end of file\n"
+        },
+        {
+          "date": 1669328093151,
+          "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,7 +7,28 @@\n \n const accessTokenSecret = process.env.ACCESS_TOKEN_SECRET;\n module.exports = {\n     signAccessToken(payload) {\n-        retr\n+        return new Promise((resolve, reject) => {\n+            jwt.sign({\n+                payload\n+            }, accessTokenSecret, {}, (err, token) => {\n+                if (err) {\n+                    reject(createError.InternalServerError())\n+                }\n+                resolve(token)\n+            })\n+        })\n+    },\n+    verifyAccessToken(token) {\n+        return new Promise((resolve, reject) => {\n+            jwt.verify(token, accessTokenSecret, (err, payload) => {\n+                if (err) {\n+                    const message = err.name == 'JsonWebTokenError' ? 'Unauthorized' : err.message\n+                    return reject(createError.Unauthorized(message))\n+                }\n+                resolve(payload)\n+            })\n+        })\n     }\n+\n };\n\\ No newline at end of file\n"
         }
       ],
       "date": 1669142478673,
