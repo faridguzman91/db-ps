@@ -1,18 +1,15 @@
-import { PrismaClient } from "@prisma/client";
-
+const { PrismaClient } = require("@prisma/client");
 const prisma = new PrismaClient();
 
 require("dotenv").config();
+const bcrypt = require("bcryptjs");
+const jwt = require("../utils/jwt");
 
-import bcrypt from "bcryptjs";
-
-import jwt from "../utils/webtokens";
-
-class AuthService {
+class authService {
   static async register(data) {
     const { email } = data;
     data.password = bcrypt.hashSync(data.password, 8);
-    let user = prisma.user.create({
+    let user = await prisma.user.create({
       data,
     });
     data.accessToken = await jwt.signAccessToken(user);
@@ -40,10 +37,11 @@ class AuthService {
       accessToken,
     };
   }
+
   static async all() {
     const allUsers = await prisma.user.findMany();
     return allUsers;
   }
 }
 
-module.exports = AuthService;
+module.exports = authService;

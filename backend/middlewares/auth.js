@@ -1,16 +1,14 @@
-import createHttpError from "http-errors";
-
-import webtokens from "../utils/webtokens";
-
+const jwt = require("../utils/jwt");
+const createError = require("http-errors");
 const auth = async (req, res, next) => {
-  if (!req.headers.autorization) {
-    return next(createHttpError.Unauthorized("Access token is required"));
+  if (!req.headers.authorization) {
+    return next(createError.Unauthorized("Access token is required"));
   }
-  const token = req.headers.autorization.split(" ")[1];
+  const token = req.headers.authorization.split(" ")[1];
   if (!token) {
-    return next(createHttpError.Unauthorized());
+    return next(createError.Unauthorized());
   }
-  await webtokens
+  await jwt
     .verifyAccessToken(token)
     .then((user) => {
       req.user = user;
@@ -20,5 +18,4 @@ const auth = async (req, res, next) => {
       next(createError.Unauthorized(e.message));
     });
 };
-
 module.exports = auth;

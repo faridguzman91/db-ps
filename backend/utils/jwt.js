@@ -1,8 +1,6 @@
-import { HttpError } from "http-errors";
-import jwt from "jsonwebtoken";
-
-import dotenv from "dotenv";
-
+const jwt = require("jsonwebtoken");
+const createError = require("http-errors");
+require("dotenv").config();
 const accessTokenSecret = process.env.ACCESS_TOKEN_SECRET;
 module.exports = {
   signAccessToken(payload) {
