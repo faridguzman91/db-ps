@@ -9,7 +9,8 @@ import CVPage from "./pages/cv";
 import ExhibitionsHomePage from "./pages/exhibitionhome";
 import GalleryPage from "./pages/gallery";
 import HomePage from "./pages/home";
-import UploadClient from "./pages/uploadclient";
+import UploadImage from "./pages/subpages/uploadclient/uploadimage";
+import UploadLogin from "./pages/subpages/uploadclient/uploadlogin";
 
 // const prisma = new PrismaClient()
 
@@ -26,7 +27,8 @@ function App(): JSX.Element {
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/exhibitions" element={<ExhibitionsHomePage />} />
         <Route path="/gallery" element={<GalleryPage />} />
-        <Route path="/uploadclient" element={<UploadClient />} />
+        <Route path="/uploadlogin" element={<UploadLogin />} />
+        <Route path="/uploadimage" element={<UploadImage />} />
         <Route path="/contact" element={<ContactPage />} />
       </Routes>
     </div>
