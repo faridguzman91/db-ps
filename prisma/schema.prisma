@@ -1,6 +1,5 @@
 generator client {
-  provider        = "prisma-client-js"
-  previewFeatures = ["referentialIntegrity"]
+  provider = "prisma-client-js"
 }
 
 datasource db {
@@ -40,12 +39,7 @@ model text {
   @@index([category_id], map: "category_id_idx")
 }
 
-model users {
-  id   Int    @id @default(autoincrement())
-  name String @db.VarChar(255)
-}
-
-model User {
+model Users {
   id       Int     @id @default(autoincrement())
   email    String  @unique
   name     String?

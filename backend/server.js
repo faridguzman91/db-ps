@@ -6,9 +6,9 @@ require("dotenv").config();
 const bodyParser = require("body-parser");
 const multer = require("multer");
 app.use(
-  bodyParser.urlencoded({
-    extended: true,
-  })
+    bodyParser.urlencoded({
+        extended: true,
+    })
 );
 app.use(bodyParser.json());
 
@@ -16,9 +16,9 @@ app.use(bodyParser.json());
 const route = require("./routes");
 app.use("/", route);
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 42069;
 app.listen(port, () => {
-  console.log(`server is running on port ${port}`);
+    console.log(`server is running on port ${port}`);
 });
 const connectPscale = mysql.createConnection(process.env.DATABASE_URL);
 console.log(connectPscale, "Connected to Pscale!");
