@@ -1,90 +1,94 @@
 {
-  "sourceFile": "backend/server.js",
-  "activeCommit": 0,
-  "commits": [
-    {
-      "activePatchIndex": 18,
-      "patches": [
+    "sourceFile": "backend/server.js",
+    "activeCommit": 0,
+    "commits": [
         {
-          "date": 1660998792748,
-          "content": "Index: \n===================================================================\n--- \n+++ \n"
-        },
-        {
-          "date": 1660998832019,
-          "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import dotenv from 'dotenv'\n import express from 'express'\n import mysql from 'mysql2'\n-X\n \n+\n const PORT = process.env.PORT || 3000\n \n \n const connection = mysql.createConnection(process.env.DATABASE_URL)\n"
-        },
-        {
-          "date": 1660999034959,
-          "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,12 @@\n import dotenv from 'dotenv'\n import express from 'express'\n-import mysql from 'mysql2'\n+// import mysql from 'mysql2'\n \n \n+const mysql2 = require('mysql2')\n+\n+\n const PORT = process.env.PORT || 3000\n \n \n const connection = mysql.createConnection(process.env.DATABASE_URL)\n"
-        },
-        {
-          "date": 1660999056245,
-          "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n import dotenv from 'dotenv'\n import express from 'express'\n-// import mysql from 'mysql2'\n+import mysql from 'mysql2'\n \n \n-const mysql2 = require('mysql2')\n+// const mysql2 = require('mysql2')\n \n \n const PORT = process.env.PORT || 3000\n \n"
-        },
-        {
-          "date": 1660999153335,
-          "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,5 +19,11 @@\n const app = express()\n \n app.listen(3001, () => {\n     console.log('Server is listening on port 3001')\n-})\n\\ No newline at end of file\n+})\n+\n+require('dotenv').config()\n+const mysql = require('mysql2')\n+    // const connection = mysql.createConnection(process.env.DATABASE_URL)\n+console.log('Connected to PlanetScale!')\n+connection.end()\n\\ No newline at end of file\n"
-        },
-        {
-          "date": 1660999169055,
-          "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import dotenv from 'dotenv'\n import express from 'express'\n-import mysql from 'mysql2'\n+// import mysql from 'mysql2'\n \n \n // const mysql2 = require('mysql2')\n \n"
-        },
-        {
-          "date": 1660999185367,
-          "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,13 @@\n // import mysql from 'mysql2'\n \n \n // const mysql2 = require('mysql2')\n+require('dotenv').config()\n+const mysql = require('mysql2')\n+    // const connection = mysql.createConnection(process.env.DATABASE_URL)\n+console.log('Connected to PlanetScale!')\n+connection.end()\n \n \n const PORT = process.env.PORT || 3000\n \n@@ -19,11 +24,5 @@\n const app = express()\n \n app.listen(3001, () => {\n     console.log('Server is listening on port 3001')\n-})\n-\n-require('dotenv').config()\n-const mysql = require('mysql2')\n-    // const connection = mysql.createConnection(process.env.DATABASE_URL)\n-console.log('Connected to PlanetScale!')\n-connection.end()\n\\ No newline at end of file\n+})\n\\ No newline at end of file\n"
-        },
-        {
-          "date": 1660999191430,
-          "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,15 +3,11 @@\n // import mysql from 'mysql2'\n \n \n // const mysql2 = require('mysql2')\n-require('dotenv').config()\n-const mysql = require('mysql2')\n-    // const connection = mysql.createConnection(process.env.DATABASE_URL)\n-console.log('Connected to PlanetScale!')\n-connection.end()\n \n \n+\n const PORT = process.env.PORT || 3000\n \n \n const connection = mysql.createConnection(process.env.DATABASE_URL)\n"
-        },
-        {
-          "date": 1660999196489,
-          "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import dotenv from 'dotenv'\n import express from 'express'\n-// import mysql from 'mysql2'\n+import mysql from 'mysql2'\n \n \n // const mysql2 = require('mysql2')\n \n"
-        },
-        {
-          "date": 1660999277254,
-          "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n \n const connection = mysql.createConnection(process.env.DATABASE_URL)\n console.log('connected to pscale db!')\n \n-connection.end()\n+// connection.end()\n \n dotenv.config()\n \n const app = express()\n"
-        },
-        {
-          "date": 1660999297147,
-          "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,19 +2,16 @@\n import express from 'express'\n import mysql from 'mysql2'\n \n \n-// const mysql2 = require('mysql2')\n \n-\n-\n const PORT = process.env.PORT || 3000\n \n \n const connection = mysql.createConnection(process.env.DATABASE_URL)\n console.log('connected to pscale db!')\n \n-// connection.end()\n+connection.end()\n \n dotenv.config()\n \n const app = express()\n"
-        },
-        {
-          "date": 1661025944598,
-          "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,21 +1,22 @@\n-import dotenv from 'dotenv'\n-import express from 'express'\n-import mysql from 'mysql2'\n+import colors from 'colors';\n+import dotenv from 'dotenv';\n+import express from 'express';\n+import mysql from 'mysql2';\n \n+dotenv.config();\n \n \n-const PORT = process.env.PORT || 3000\n \n+const PORT = process.env.port || 5000\n \n-const connection = mysql.createConnection(process.env.DATABASE_URL)\n-console.log('connected to pscale db!')\n+const connectPscale = mysql.createConnection(process.env.DATABASE_URL)\n+console.log('Connected to Pscale!')\n+    // const {errorHandler} = require('.middleware/errorMiddleware')\n+    // const connection = require(\"mysql2/typings/mysql/lib/Connection\")\n+    // connection.end()\n \n-connection.end()\n+const app = express();\n \n-dotenv.config()\n-\n-const app = express()\n-\n app.listen(3001, () => {\n-    console.log('Server is listening on port 3001')\n+    console.log('app listening')\n })\n\\ No newline at end of file\n"
-        },
-        {
-          "date": 1667847733448,
-          "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,22 +1,24 @@\n-import colors from 'colors';\n-import dotenv from 'dotenv';\n-import express from 'express';\n-import mysql from 'mysql2';\n-\n-dotenv.config();\n-\n-\n-\n-const PORT = process.env.port || 5000\n-\n-const connectPscale = mysql.createConnection(process.env.DATABASE_URL)\n-console.log('Connected to Pscale!')\n-    // const {errorHandler} = require('.middleware/errorMiddleware')\n-    // const connection = require(\"mysql2/typings/mysql/lib/Connection\")\n-    // connection.end()\n-\n-const app = express();\n-\n-app.listen(3001, () => {\n-    console.log('app listening')\n+import dotenv from 'dotenv';\r\n+import express from 'express';\r\n+import mysql from 'mysql2';\r\n+\r\n+\r\n+\r\n+dotenv.config();\r\n+\r\n+const PORT = process.env.port || 5000\r\n+\r\n+const connectPscale = mysql.createConnection(process.env.DATABASE_URL)\r\n+console.log('Connected to Pscale!')\r\n+\r\n+// make sure the .env has the current username and password to avoid isServer issue\r\n+\r\n+const app = express();\r\n+\r\n+app.listen(3001, () => {\r\n+    console.log('app listening')\r\n+})\r\n+\r\n+app.get('/', (req, res) => {\r\n+    res.send('Hello World')\r\n })\n\\ No newline at end of file\n"
-        },
-        {
-          "date": 1667847743217,
-          "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,5 @@\n+import colors from 'colors';\r\n import dotenv from 'dotenv';\r\n import express from 'express';\r\n import mysql from 'mysql2';\r\n \r\n"
-        },
-        {
-          "date": 1669141952297,
-          "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,33 @@\n+import {\r\n+    PrismaClient\r\n+} from '@prisma/client';\r\n import colors from 'colors';\r\n import dotenv from 'dotenv';\r\n import express from 'express';\r\n import mysql from 'mysql2';\r\n \r\n+import bodyParser from 'body-parser';\r\n+import multer from 'multer';\r\n+import routes from './routes';\r\n \r\n+app.use(bodyParser.json());\r\n+app.use(bodyParser.urlencoded({\r\n+    extended: true\r\n+}));\r\n \r\n+app.use('/', routes);\r\n+const prisma = new PrismaClient()\r\n+\r\n+\r\n+const pool = mysql.createPool({\r\n+    host: process.env.DB_HOST,\r\n+    user: process.env.DB_USER,\r\n+    password: process.env.DB_PASSWORD,\r\n+    database: process.env.DB_DATABASE,\r\n+})\r\n+\r\n+\r\n dotenv.config();\r\n \r\n const PORT = process.env.port || 5000\r\n \r\n"
-        },
-        {
-          "date": 1669141990592,
-          "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,8 +15,10 @@\n     extended: true\r\n }));\r\n \r\n app.use('/', routes);\r\n+\r\n+\r\n const prisma = new PrismaClient()\r\n \r\n \r\n const pool = mysql.createPool({\r\n@@ -37,9 +39,9 @@\n // make sure the .env has the current username and password to avoid isServer issue\r\n \r\n const app = express();\r\n \r\n-app.listen(3001, () => {\r\n+app.listen(PORT, () => {\r\n     console.log('app listening')\r\n })\r\n \r\n app.get('/', (req, res) => {\r\n"
-        },
-        {
-          "date": 1669142041810,
-          "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,9 +41,5 @@\n const app = express();\r\n \r\n app.listen(PORT, () => {\r\n     console.log('app listening')\r\n-})\r\n-\r\n-app.get('/', (req, res) => {\r\n-    res.send('Hello World')\r\n })\n\\ No newline at end of file\n"
-        },
-        {
-          "date": 1669144239531,
-          "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n \r\n const PORT = process.env.port || 5000\r\n \r\n const connectPscale = mysql.createConnection(process.env.DATABASE_URL)\r\n-console.log('Connected to Pscale!')\r\n+console.log(connectPscale, 'Connected to Pscale!')\r\n \r\n // make sure the .env has the current username and password to avoid isServer issue\r\n \r\n const app = express();\r\n"
-        },
-        {
-          "date": 1669153247893,
-          "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,8 +28,11 @@\n     database: process.env.DB_DATABASE,\r\n })\r\n \r\n \r\n+// https://blog.logrocket.com/crafting-authentication-schemes-with-prisma-in-express/\r\n+\r\n+\r\n dotenv.config();\r\n \r\n const PORT = process.env.port || 5000\r\n \r\n"
+            "activePatchIndex": 19,
+            "patches": [
+                {
+                    "date": 1660998792748,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1660998832019,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import dotenv from 'dotenv'\n import express from 'express'\n import mysql from 'mysql2'\n-X\n \n+\n const PORT = process.env.PORT || 3000\n \n \n const connection = mysql.createConnection(process.env.DATABASE_URL)\n"
+                },
+                {
+                    "date": 1660999034959,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,12 @@\n import dotenv from 'dotenv'\n import express from 'express'\n-import mysql from 'mysql2'\n+// import mysql from 'mysql2'\n \n \n+const mysql2 = require('mysql2')\n+\n+\n const PORT = process.env.PORT || 3000\n \n \n const connection = mysql.createConnection(process.env.DATABASE_URL)\n"
+                },
+                {
+                    "date": 1660999056245,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n import dotenv from 'dotenv'\n import express from 'express'\n-// import mysql from 'mysql2'\n+import mysql from 'mysql2'\n \n \n-const mysql2 = require('mysql2')\n+// const mysql2 = require('mysql2')\n \n \n const PORT = process.env.PORT || 3000\n \n"
+                },
+                {
+                    "date": 1660999153335,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,5 +19,11 @@\n const app = express()\n \n app.listen(3001, () => {\n     console.log('Server is listening on port 3001')\n-})\n\\ No newline at end of file\n+})\n+\n+require('dotenv').config()\n+const mysql = require('mysql2')\n+    // const connection = mysql.createConnection(process.env.DATABASE_URL)\n+console.log('Connected to PlanetScale!')\n+connection.end()\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1660999169055,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import dotenv from 'dotenv'\n import express from 'express'\n-import mysql from 'mysql2'\n+// import mysql from 'mysql2'\n \n \n // const mysql2 = require('mysql2')\n \n"
+                },
+                {
+                    "date": 1660999185367,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,13 @@\n // import mysql from 'mysql2'\n \n \n // const mysql2 = require('mysql2')\n+require('dotenv').config()\n+const mysql = require('mysql2')\n+    // const connection = mysql.createConnection(process.env.DATABASE_URL)\n+console.log('Connected to PlanetScale!')\n+connection.end()\n \n \n const PORT = process.env.PORT || 3000\n \n@@ -19,11 +24,5 @@\n const app = express()\n \n app.listen(3001, () => {\n     console.log('Server is listening on port 3001')\n-})\n-\n-require('dotenv').config()\n-const mysql = require('mysql2')\n-    // const connection = mysql.createConnection(process.env.DATABASE_URL)\n-console.log('Connected to PlanetScale!')\n-connection.end()\n\\ No newline at end of file\n+})\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1660999191430,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,15 +3,11 @@\n // import mysql from 'mysql2'\n \n \n // const mysql2 = require('mysql2')\n-require('dotenv').config()\n-const mysql = require('mysql2')\n-    // const connection = mysql.createConnection(process.env.DATABASE_URL)\n-console.log('Connected to PlanetScale!')\n-connection.end()\n \n \n+\n const PORT = process.env.PORT || 3000\n \n \n const connection = mysql.createConnection(process.env.DATABASE_URL)\n"
+                },
+                {
+                    "date": 1660999196489,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import dotenv from 'dotenv'\n import express from 'express'\n-// import mysql from 'mysql2'\n+import mysql from 'mysql2'\n \n \n // const mysql2 = require('mysql2')\n \n"
+                },
+                {
+                    "date": 1660999277254,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n \n const connection = mysql.createConnection(process.env.DATABASE_URL)\n console.log('connected to pscale db!')\n \n-connection.end()\n+// connection.end()\n \n dotenv.config()\n \n const app = express()\n"
+                },
+                {
+                    "date": 1660999297147,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,19 +2,16 @@\n import express from 'express'\n import mysql from 'mysql2'\n \n \n-// const mysql2 = require('mysql2')\n \n-\n-\n const PORT = process.env.PORT || 3000\n \n \n const connection = mysql.createConnection(process.env.DATABASE_URL)\n console.log('connected to pscale db!')\n \n-// connection.end()\n+connection.end()\n \n dotenv.config()\n \n const app = express()\n"
+                },
+                {
+                    "date": 1661025944598,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,21 +1,22 @@\n-import dotenv from 'dotenv'\n-import express from 'express'\n-import mysql from 'mysql2'\n+import colors from 'colors';\n+import dotenv from 'dotenv';\n+import express from 'express';\n+import mysql from 'mysql2';\n \n+dotenv.config();\n \n \n-const PORT = process.env.PORT || 3000\n \n+const PORT = process.env.port || 5000\n \n-const connection = mysql.createConnection(process.env.DATABASE_URL)\n-console.log('connected to pscale db!')\n+const connectPscale = mysql.createConnection(process.env.DATABASE_URL)\n+console.log('Connected to Pscale!')\n+    // const {errorHandler} = require('.middleware/errorMiddleware')\n+    // const connection = require(\"mysql2/typings/mysql/lib/Connection\")\n+    // connection.end()\n \n-connection.end()\n+const app = express();\n \n-dotenv.config()\n-\n-const app = express()\n-\n app.listen(3001, () => {\n-    console.log('Server is listening on port 3001')\n+    console.log('app listening')\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1667847733448,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,22 +1,24 @@\n-import colors from 'colors';\n-import dotenv from 'dotenv';\n-import express from 'express';\n-import mysql from 'mysql2';\n-\n-dotenv.config();\n-\n-\n-\n-const PORT = process.env.port || 5000\n-\n-const connectPscale = mysql.createConnection(process.env.DATABASE_URL)\n-console.log('Connected to Pscale!')\n-    // const {errorHandler} = require('.middleware/errorMiddleware')\n-    // const connection = require(\"mysql2/typings/mysql/lib/Connection\")\n-    // connection.end()\n-\n-const app = express();\n-\n-app.listen(3001, () => {\n-    console.log('app listening')\n+import dotenv from 'dotenv';\r\n+import express from 'express';\r\n+import mysql from 'mysql2';\r\n+\r\n+\r\n+\r\n+dotenv.config();\r\n+\r\n+const PORT = process.env.port || 5000\r\n+\r\n+const connectPscale = mysql.createConnection(process.env.DATABASE_URL)\r\n+console.log('Connected to Pscale!')\r\n+\r\n+// make sure the .env has the current username and password to avoid isServer issue\r\n+\r\n+const app = express();\r\n+\r\n+app.listen(3001, () => {\r\n+    console.log('app listening')\r\n+})\r\n+\r\n+app.get('/', (req, res) => {\r\n+    res.send('Hello World')\r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1667847743217,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,5 @@\n+import colors from 'colors';\r\n import dotenv from 'dotenv';\r\n import express from 'express';\r\n import mysql from 'mysql2';\r\n \r\n"
+                },
+                {
+                    "date": 1669141952297,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,33 @@\n+import {\r\n+    PrismaClient\r\n+} from '@prisma/client';\r\n import colors from 'colors';\r\n import dotenv from 'dotenv';\r\n import express from 'express';\r\n import mysql from 'mysql2';\r\n \r\n+import bodyParser from 'body-parser';\r\n+import multer from 'multer';\r\n+import routes from './routes';\r\n \r\n+app.use(bodyParser.json());\r\n+app.use(bodyParser.urlencoded({\r\n+    extended: true\r\n+}));\r\n \r\n+app.use('/', routes);\r\n+const prisma = new PrismaClient()\r\n+\r\n+\r\n+const pool = mysql.createPool({\r\n+    host: process.env.DB_HOST,\r\n+    user: process.env.DB_USER,\r\n+    password: process.env.DB_PASSWORD,\r\n+    database: process.env.DB_DATABASE,\r\n+})\r\n+\r\n+\r\n dotenv.config();\r\n \r\n const PORT = process.env.port || 5000\r\n \r\n"
+                },
+                {
+                    "date": 1669141990592,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,8 +15,10 @@\n     extended: true\r\n }));\r\n \r\n app.use('/', routes);\r\n+\r\n+\r\n const prisma = new PrismaClient()\r\n \r\n \r\n const pool = mysql.createPool({\r\n@@ -37,9 +39,9 @@\n // make sure the .env has the current username and password to avoid isServer issue\r\n \r\n const app = express();\r\n \r\n-app.listen(3001, () => {\r\n+app.listen(PORT, () => {\r\n     console.log('app listening')\r\n })\r\n \r\n app.get('/', (req, res) => {\r\n"
+                },
+                {
+                    "date": 1669142041810,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,9 +41,5 @@\n const app = express();\r\n \r\n app.listen(PORT, () => {\r\n     console.log('app listening')\r\n-})\r\n-\r\n-app.get('/', (req, res) => {\r\n-    res.send('Hello World')\r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1669144239531,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n \r\n const PORT = process.env.port || 5000\r\n \r\n const connectPscale = mysql.createConnection(process.env.DATABASE_URL)\r\n-console.log('Connected to Pscale!')\r\n+console.log(connectPscale, 'Connected to Pscale!')\r\n \r\n // make sure the .env has the current username and password to avoid isServer issue\r\n \r\n const app = express();\r\n"
+                },
+                {
+                    "date": 1669153247893,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,8 +28,11 @@\n     database: process.env.DB_DATABASE,\r\n })\r\n \r\n \r\n+// https://blog.logrocket.com/crafting-authentication-schemes-with-prisma-in-express/\r\n+\r\n+\r\n dotenv.config();\r\n \r\n const PORT = process.env.port || 5000\r\n \r\n"
+                },
+                {
+                    "date": 1677623794616,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,48 +1,30 @@\n-import {\r\n-    PrismaClient\r\n-} from '@prisma/client';\r\n-import colors from 'colors';\r\n-import dotenv from 'dotenv';\r\n-import express from 'express';\r\n-import mysql from 'mysql2';\r\n-\r\n-import bodyParser from 'body-parser';\r\n-import multer from 'multer';\r\n-import routes from './routes';\r\n-\r\n-app.use(bodyParser.json());\r\n-app.use(bodyParser.urlencoded({\r\n-    extended: true\r\n-}));\r\n-\r\n-app.use('/', routes);\r\n-\r\n-\r\n-const prisma = new PrismaClient()\r\n-\r\n-\r\n-const pool = mysql.createPool({\r\n-    host: process.env.DB_HOST,\r\n-    user: process.env.DB_USER,\r\n-    password: process.env.DB_PASSWORD,\r\n-    database: process.env.DB_DATABASE,\r\n-})\r\n-\r\n-\r\n-// https://blog.logrocket.com/crafting-authentication-schemes-with-prisma-in-express/\r\n-\r\n-\r\n-dotenv.config();\r\n-\r\n-const PORT = process.env.port || 5000\r\n-\r\n-const connectPscale = mysql.createConnection(process.env.DATABASE_URL)\r\n-console.log(connectPscale, 'Connected to Pscale!')\r\n-\r\n-// make sure the .env has the current username and password to avoid isServer issue\r\n-\r\n-const app = express();\r\n-\r\n-app.listen(PORT, () => {\r\n-    console.log('app listening')\r\n-})\n\\ No newline at end of file\n+const express = require(\"express\");\n+const mysql = require(\"mysql2\");\n+require(\"@prisma/client\");\n+const app = express();\n+require(\"dotenv\").config();\n+const bodyParser = require(\"body-parser\");\n+const multer = require(\"multer\");\n+app.use(\n+    bodyParser.urlencoded({\n+        extended: true,\n+    })\n+);\n+app.use(bodyParser.json());\n+\n+// redirect to routes/index.js\n+const route = require(\"./routes\");\n+app.use(\"/\", route);\n+\n+const port = process.env.PORT || 42069;\n+app.listen(port, () => {\n+    console.log(`server is running on port ${port}`);\n+});\n+const connectPscale = mysql.createConnection(process.env.DATABASE_URL);\n+console.log(connectPscale, \"Connected to Pscale!\");\n+\n+// make sure the .env has the current username and password to avoid isServer issue\n+// https://blog.logrocket.com/crafting-authentication-schemes-with-prisma-in-express/\n+\n+//uploadimage tutorial//\n+//https://mediajams.dev/post/upload-and-display-images-using-prisma\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1660998792748,
+            "name": "Commit-0",
+            "content": "import dotenv from 'dotenv'\nimport express from 'express'\nimport mysql from 'mysql2'\nX\n\nconst PORT = process.env.PORT || 3000\n\n\nconst connection = mysql.createConnection(process.env.DATABASE_URL)\nconsole.log('connected to pscale db!')\n\nconnection.end()\n\ndotenv.config()\n\nconst app = express()\n\napp.listen(3001, () => {\n    console.log('Server is listening on port 3001')\n})"
         }
-      ],
-      "date": 1660998792748,
-      "name": "Commit-0",
-      "content": "import dotenv from 'dotenv'\nimport express from 'express'\nimport mysql from 'mysql2'\nX\n\nconst PORT = process.env.PORT || 3000\n\n\nconst connection = mysql.createConnection(process.env.DATABASE_URL)\nconsole.log('connected to pscale db!')\n\nconnection.end()\n\ndotenv.config()\n\nconst app = express()\n\napp.listen(3001, () => {\n    console.log('Server is listening on port 3001')\n})"
-    }
-  ]
+    ]
 }

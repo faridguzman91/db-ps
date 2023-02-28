@@ -25,3 +25,6 @@ console.log(connectPscale, "Connected to Pscale!");
 
 // make sure the .env has the current username and password to avoid isServer issue
 // https://blog.logrocket.com/crafting-authentication-schemes-with-prisma-in-express/
+
+//uploadimage tutorial//
+//https://mediajams.dev/post/upload-and-display-images-using-prisma
