@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 // add the beginning of your app entry
+import React from "react";
 import "vite/modulepreload-polyfill";
 import "./input.css";
 import BioPage from "./pages/bio";

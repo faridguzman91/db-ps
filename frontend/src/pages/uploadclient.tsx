@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import React from "react";
-import UploadHeroPic from "../assets/david-painting.jpg";
+import UploadHeroPic from "../assets/painting/david-painting.jpg";
 import UploadPageContainer from "../components/containers/upload/upload-container";
 const picWidth: number = 600;
 const picHeight: number = 400;
