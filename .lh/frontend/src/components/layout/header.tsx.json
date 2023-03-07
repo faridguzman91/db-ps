@@ -1,0 +1,34 @@
+{
+    "sourceFile": "frontend/src/components/layout/header.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 4,
+            "patches": [
+                {
+                    "date": 1677929651615,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1677929869598,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n \n const Header = () => {\n   const router = useRouter();\n \n-  const isActive = (pathname: any) => router.pathname === pathname;\n+  // const isActive = (pathname: any) => router.pathname === pathname;\n \n   return (\n     <nav>\n       <div className=\"left\">\n"
+                },
+                {
+                    "date": 1677929896924,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n   return (\n     <nav>\n       <div className=\"left\">\n         <Link href=\"/\">\n-          <a className=\"bold\" data-active={isActive(\"/\")}>\n+          <a className=\"bold\">\n             Image Gallery\n           </a>\n         </Link>\n       </div>\n"
+                },
+                {
+                    "date": 1677929907446,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n         </Link>\n       </div>\n       <div className=\"right\">\n         <Link href=\"/upload\">\n-          <a data-active={isActive(\"/upload\")}>Upload</a>\n+          <a>Upload</a>\n         </Link>\n       </div>\n     </nav>\n   );\n"
+                },
+                {
+                    "date": 1677929989550,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n import Link from \"next/link\";\n import { useRouter } from \"next/router\";\n \n const Header = () => {\n-  const router = useRouter();\n \n+\n   // const isActive = (pathname: any) => router.pathname === pathname;\n \n   return (\n     <nav>\n"
+                }
+            ],
+            "date": 1677929651615,
+            "name": "Commit-0",
+            "content": "import Link from \"next/link\";\nimport { useRouter } from \"next/router\";\n\nconst Header = () => {\n  const router = useRouter();\n\n  const isActive = (pathname: any) => router.pathname === pathname;\n\n  return (\n    <nav>\n      <div className=\"left\">\n        <Link href=\"/\">\n          <a className=\"bold\" data-active={isActive(\"/\")}>\n            Image Gallery\n          </a>\n        </Link>\n      </div>\n      <div className=\"right\">\n        <Link href=\"/upload\">\n          <a data-active={isActive(\"/upload\")}>Upload</a>\n        </Link>\n      </div>\n    </nav>\n  );\n};\n\nexport default Header;\n"
+        }
+    ]
+}
