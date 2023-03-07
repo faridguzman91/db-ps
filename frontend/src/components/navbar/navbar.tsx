@@ -1,11 +1,33 @@
+import { motion, Variants } from "framer-motion";
 import React from "react";
 import { Link } from "react-router-dom";
 
+
+const itemVariants: Variants = {
+  open: {
+    opacity: 1,
+    y: 0,
+    transition: { type: "spring", stiffness: 300, damping: 24 }
+  },
+  closed: { opacity: 0, y: 20, transition: { duration: 0.2 } }
+};
+
 function Navbar() {
+
+  const [isOpen, setIsOpen] = React.useState(false);
+
+
   return (
-    <div className="navbar bg-base-100">
+    <motion.nav
+      className="navbar bg-base-100"
+      initial={false}
+      animate-={isOpen ? "open" : "closed"}
+    >
       <div className="flex-none">
-        <button className="btn btn-square btn-ghost font-ptmono">
+        <motion.button
+          whileTap={{ scale: 0.9 }}
+          onClick={() => setIsOpen(!isOpen)}
+          className="btn btn-square btn-ghost font-ptmono">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -19,7 +41,7 @@ function Navbar() {
               d="M4 6h16M4 12h16M4 18h16"
             ></path>
           </svg>
-        </button>
+        </motion.button>
       </div>
       <div className="flex-1">
         <Link to="/" className="btn btn-ghost normal-case text-xl font-ptmono">
@@ -93,7 +115,7 @@ function Navbar() {
           </svg>
         </button>
       </div>
-    </div>
+    </motion.nav>
   );
 }
 

@@ -1,37 +1,38 @@
 {
-  "name": "frontend",
-  "private": true,
-  "version": "0.1.0",
-  "proxy": "https://localhost:3000/",
-  "type": "module",
-  "scripts": {
-    "dev": "vite dev",
-    "build": "tsc && vite build && next build",
-    "start": "next start",
-    "preview": "vite preview"
-  },
-  "dependencies": {
-    "concurrently": "^7.3.0",
-    "daisyui": "^2.24.0",
-    "file-loader": "^6.2.0",
-    "framer-motion": "^7.2.1",
-    "gsap": "^3.11.0",
-    "mobx": "^6.6.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-router-dom": "^6.3.0",
-    "three": "^0.143.0",
-    "tsc": "^2.0.4",
-    "vite-plugin-ssr": "^0.4.90"
-  },
-  "devDependencies": {
-    "@types/node": "^18.14.6",
-    "@types/react": "^18.0.17",
-    "@types/react-dom": "^18.0.6",
-    "@vitejs/plugin-react": "^2.0.1",
-    "tailwind": "^4.0.0",
-    "tailwindcss": "^3.1.8",
-    "typescript": "^4.6.4",
-    "vite": "^3.2.4"
-  }
+    "name": "frontend",
+    "version": "1.0.0",
+    "proxy": "https://localhost:3000/",
+    "type": "module",
+    "scripts": {
+        "dev": "vite dev",
+        "build": "tsc && vite build && next build",
+        "start": "next start",
+        "preview": "vite preview"
+    },
+    "dependencies": {
+        "backend": "1.0.0",
+        "concurrently": "^7.3.0",
+        "cross-env": "5.0.5",
+        "daisyui": "^2.24.0",
+        "file-loader": "^6.2.0",
+        "framer-motion": "^7.2.1",
+        "gsap": "^3.11.0",
+        "mobx": "^6.6.1",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-router-dom": "^6.3.0",
+        "three": "^0.143.0",
+        "tsc": "^2.0.4",
+        "vite-plugin-ssr": "^0.4.90"
+    },
+    "devDependencies": {
+        "@types/node": "^18.14.6",
+        "@types/react": "^18.0.17",
+        "@types/react-dom": "^18.0.6",
+        "@vitejs/plugin-react": "^2.0.1",
+        "tailwind": "^4.0.0",
+        "tailwindcss": "^3.1.8",
+        "typescript": "^4.6.4",
+        "vite": "^3.2.4"
+    }
 }
