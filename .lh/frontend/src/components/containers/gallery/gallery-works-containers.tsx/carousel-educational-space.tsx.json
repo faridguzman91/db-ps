@@ -1,0 +1,26 @@
+{
+    "sourceFile": "frontend/src/components/containers/gallery/gallery-works-containers.tsx/carousel-educational-space.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1678545747963,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1678545830735,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,31 @@\n import React from 'react'\n \n function CarouselEducationalSpace() {\n     return (\n-        <div>CarouselEducationalSpace</div>\n+        <div className=\"carousel rounded-box\">\n+        <div className=\"carousel-item\">\n+            <img src=\"/images/stock/photo-1559703248-dcaaec9fab78.jpg\" alt=\"Burger\" />\n+        </div>\n+        <div className=\"carousel-item\">\n+            <img src=\"/images/stock/photo-1565098772267-60af42b81ef2.jpg\" alt=\"Burger\" />\n+        </div>\n+        <div className=\"carousel-item\">\n+            <img src=\"/images/stock/photo-1572635148818-ef6fd45eb394.jpg\" alt=\"Burger\" />\n+        </div>\n+        <div className=\"carousel-item\">\n+            <img src=\"/images/stock/photo-1494253109108-2e30c049369b.jpg\" alt=\"Burger\" />\n+        </div>\n+        <div className=\"carousel-item\">\n+            <img src=\"/images/stock/photo-1550258987-190a2d41a8ba.jpg\" alt=\"Burger\" />\n+        </div>\n+        <div className=\"carousel-item\">\n+            <img src=\"/images/stock/photo-1559181567-c3190ca9959b.jpg\" alt=\"Burger\" />\n+        </div>\n+        <div className=\"carousel-item\">\n+            <img src=\"/images/stock/photo-1601004890684-d8cbf643f5f2.jpg\" alt=\"Burger\" />\n+        </div>\n+    </div>\n     )\n }\n \n export default CarouselEducationalSpace\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1678546805928,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,8 @@\n import React from 'react'\n+import { educationalSpace } from '../../../../contentAPI/educationalSpace'\n \n+\n function CarouselEducationalSpace() {\n     return (\n         <div className=\"carousel rounded-box\">\n             <div className=\"carousel-item\">\n"
+                }
+            ],
+            "date": 1678545747963,
+            "name": "Commit-0",
+            "content": "import React from 'react'\n\nfunction CarouselEducationalSpace() {\n  return (\n    <div>CarouselEducationalSpace</div>\n  )\n}\n\nexport default CarouselEducationalSpace"
+        }
+    ]
+}
