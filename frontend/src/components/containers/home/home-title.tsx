@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import React from "react";
-import HomeHeroPic from "../../../assets/painting/david-painting.jpg";
+import HomeHeroPic from "../../../assets/paintings1/IMG_01.jpg";
 
 
 interface Props {

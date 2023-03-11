@@ -51,7 +51,9 @@ function Navbar() {
       <div className="flex-none">
         <ul className="menu menu-horizontal p-0 font-ptmono">
           <li>
-            <a>Gallery</a>
+            <Link to="/gallery" >
+              <a>Gallery</a>
+            </Link>
           </li>
           <li tabIndex={0}>
             <a>
