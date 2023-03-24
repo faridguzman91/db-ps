@@ -1,15 +1,11 @@
 import motion from "framer-motion";
-import React from "react";
+import React, { FC } from "react";
 import GalleryContainer from '../components/containers/gallery/gallery-container';
 
-
-
-
-function GalleryPage() {
+export const GalleryPage: FC = () => {
   return (
     <GalleryContainer />
   );
 }
 
 
-export default GalleryPage;

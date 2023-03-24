@@ -4,16 +4,18 @@
     "proxy": "https://localhost:3000/",
     "type": "module",
     "scripts": {
-        "dev": "vite dev",
-        "build": "tsc && vite build && next build",
+        "dev": "vite dev && npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+        "build": "tsc && vite build && next build && npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
         "start": "next start",
         "preview": "vite preview"
     },
     "dependencies": {
+        "@types/node": "^18.15.6",
         "backend": "1.0.0",
         "concurrently": "^7.3.0",
         "cross-env": "5.0.5",
         "daisyui": "^2.24.0",
+        "esbuild-darwin-arm64": "^0.15.18",
         "file-loader": "^6.2.0",
         "framer-motion": "^7.2.1",
         "gsap": "^3.11.0",
