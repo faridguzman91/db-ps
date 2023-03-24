@@ -5,8 +5,8 @@
         "frontend"
     ],
     "scripts": {
-        "start": " node backend/server.ts",
-        "server": "nodemon backend/server.ts",
+        "start": " node backend/server.js",
+        "server": "nodemon backend/server.js",
         "client": "vite frontend",
         "dev": "concurrently \"npm run server\" \"npm run client\"",
         "build": "vite build frontend",

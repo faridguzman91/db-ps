@@ -8,7 +8,7 @@ import BlogPage from "./pages/blog";
 import ContactPage from "./pages/contact";
 import CVPage from "./pages/cv";
 import ExhibitionsHomePage from "./pages/exhibitionhome";
-import GalleryPage from "./pages/gallery";
+import { GalleryPage } from "./pages/gallery";
 import HomePage from "./pages/home";
 import UploadImage from "./pages/subpages/uploadclient/uploadimage";
 import UploadLogin from "./pages/subpages/uploadclient/uploadlogin";

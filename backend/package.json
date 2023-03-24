@@ -1,55 +1,55 @@
 {
-  "name": "backend",
-  "version": "1.0.0",
-  "description": "david bade -official",
-  "main": "server.js",
-  "scripts": {
-    "start": " node backend/server.js",
-    "server": "nodemon backend/server.js",
-    "client": "vite frontend",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "build": "vite build frontend",
-    "prepare": "husky install"
-  },
-  "keywords": [],
-  "author": "faridguzman91",
-  "license": "ISC",
-  "dependencies": {
-    "0g": "^0.0.9",
-    "@planetscale/database": "^1.5.0",
-    "@prisma/client": "^4.10.1",
-    "axios": "^0.27.2",
-    "bcrypt": "^5.0.1",
-    "bcryptjs": "^2.4.3",
-    "browserify": "^17.0.0",
-    "cloudinary": "^1.34.0",
-    "colors": "^1.4.0",
-    "concurrently": "^7.5.0",
-    "cors": "^2.8.5",
-    "cross-env": "5.0.5",
-    "dotenv": "^16.0.3",
-    "esbuild-windows-64": "^0.15.18",
-    "express": "^4.18.1",
-    "formidable": "^2.1.1",
-    "g0": "^0.0.2",
-    "http-errors": "^2.0.0",
-    "jsonwebtoken": "^8.5.1",
-    "multer": "^1.4.5-lts.1",
-    "mysql": "^2.18.1",
-    "mysql2": "^2.3.3",
-    "next": "^13.2.1",
-    "next-router": "^1.3.6",
-    "nodemon": "^2.0.19",
-    "vite": "^3.2.3"
-  },
-  "devDependencies": {
-    "husky": "^8.0.2",
-    "lint-staged": "^13.0.3",
-    "prettier": "2.8.0",
-    "prisma": "^4.10.1",
-    "sequelize-cli": "^6.5.2"
-  },
-  "lint-staged": {
-    "**/*": "prettier --write --ignore-unknown"
-  }
+    "name": "backend",
+    "version": "1.0.0",
+    "description": "david bade -official",
+    "main": "server.js",
+    "scripts": {
+        "start": " node backend/server.js",
+        "server": "nodemon backend/server.js",
+        "client": "vite frontend",
+        "dev": "concurrently \"npm run server\" \"npm run client\"",
+        "build": "vite build frontend",
+        "prepare": "husky install"
+    },
+    "keywords": [],
+    "author": "faridguzman91",
+    "license": "ISC",
+    "dependencies": {
+        "0g": "^0.0.9",
+        "@planetscale/database": "^1.5.0",
+        "@prisma/client": "^4.10.1",
+        "axios": "^0.27.2",
+        "bcrypt": "^5.0.1",
+        "bcryptjs": "^2.4.3",
+        "browserify": "^17.0.0",
+        "cloudinary": "^1.34.0",
+        "colors": "^1.4.0",
+        "concurrently": "^7.5.0",
+        "cors": "^2.8.5",
+        "cross-env": "5.0.5",
+        "dotenv": "^16.0.3",
+        "esbuild-darwin-arm64": "^0.15.18",
+        "express": "^4.18.1",
+        "formidable": "^2.1.1",
+        "g0": "^0.0.2",
+        "http-errors": "^2.0.0",
+        "jsonwebtoken": "^8.5.1",
+        "multer": "^1.4.5-lts.1",
+        "mysql": "^2.18.1",
+        "mysql2": "^2.3.3",
+        "next": "^13.2.1",
+        "next-router": "^1.3.6",
+        "nodemon": "^2.0.19",
+        "vite": "^3.2.3"
+    },
+    "devDependencies": {
+        "husky": "^8.0.2",
+        "lint-staged": "^13.0.3",
+        "prettier": "2.8.0",
+        "prisma": "^4.10.1",
+        "sequelize-cli": "^6.5.2"
+    },
+    "lint-staged": {
+        "**/*": "prettier --write --ignore-unknown"
+    }
 }

@@ -13,8 +13,22 @@ dist
 dist-ssr
 *.local
 .history
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
 history
 # Editor directories and files
+
+.lh
+.history
+.vscode
 .vscode/*
 !.vscode/extensions.json
 .idea
