@@ -1,57 +1,101 @@
-export const publicSpace = [{
-    "id": 1,
-    "name": "John Doe",
-    "title": "drawing",
-    "description": "This is a drawing of a person",
-    "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pinterest.com%2Fpin%2F397000000000000000%2F&psig=AOvVaw3Z7Z7Z7Z7Z7Z7Z7Z7Z7Z7Z&ust=1600000000000000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCJjX7Z7Z7Z7Z7Z7ZAAAAAdAAAAABAD"
-},
-{
-    "id": 2,
-    "name": "Jane Doe",
-    "title": "painting",
-    "description": "This is a painting of a person",
-    "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pinterest.com%2Fpin%2F397000000000000000%2F&psig=AOvVaw3Z7Z7Z7Z7Z7Z7Z7Z7Z7Z7Z&ust=1600000000000000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCJjX7Z7Z7Z7Z7Z7ZAAAAAdAAAAABAD"
-},
-{
-    "id": 3,
-    "name": "John Doe",
-    "title": "drawing",
-    "description": "This is a drawing of a person",
-    "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pinterest.com%2Fpin%2F397000000000000000%2F&psig=AOvVaw3Z7Z7Z7Z7Z7Z7Z7Z7Z7Z7Z&ust=1600000000000000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCJjX7Z7Z7Z7Z7Z7ZAAAAAdAAAAABAD"
-},
-{
-    "id": 4,
-    "name": "Jane Doe",
-    "title": "painting",
-    "description": "This is a painting of a person",
-    "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pinterest.com%2Fpin%2F397000000000000000%2F&psig=AOvVaw3Z7Z7Z7Z7Z7Z7Z7Z7Z7Z7Z&ust=1600000000000000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCJjX7Z7Z7Z7Z7Z7ZAAAAAdAAAAABAD"
-},
-{
-    "id": 5,
-    "name": "John Doe",
-    "title": "drawing",
-    "description": "This is a drawing of a person",
-    "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pinterest.com%2Fpin%2F397000000000000000%2F&psig=AOvVaw3Z7Z7Z7Z7Z7Z7Z7Z7Z7Z7Z&ust=1600000000000000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCJjX7Z7Z7Z7Z7Z7ZAAAAAdAAAAABAD"
-},
-{
-    "id": 6,
-    "name": "Jane Doe",
-    "title": "painting",
-    "description": "This is a painting of a person",
-    "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pinterest.com%2Fpin%2F397000000000000000%2F&psig=AOvVaw3Z7Z7Z7Z7Z7Z7Z7Z7Z7Z7Z&ust=1600000000000000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCJjX7Z7Z7Z7Z7Z7ZAAAAAdAAAAABAD"
-},
-{
-    "id": 7,
-    "name": "John Doe",
-    "title": "drawing",
-    "description": "This is a drawing of a person",
-    "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pinterest.com%2Fpin%2F397000000000000000%2F&psig=AOvVaw3Z7Z7Z7Z7Z7Z7Z7Z7Z7Z7Z&ust=1600000000000000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCJjX7Z7Z7Z7Z7Z7ZAAAAAdAAAAABAD"
-},
-{
-    "id": 8,
-    "name": "Jane Doe",
-    "title": "painting",
-    "description": "This is a painting of a person",
-    "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pinterest.com%2Fpin%2F397000000000000000%2F&psig=AOvVaw3Z7Z7Z7Z7Z7Z7Z7Z7Z7Z7Z&ust=1600000000000000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCJjX7Z7Z7Z7Z7Z7ZAAAAAdAAAAABAD"
-}
-]
+export const publicSpace: {
+  id: number;
+  name: string;
+  title: string;
+  description: string;
+  image: string;
+}[] = Array(
+  {
+    id: 1,
+    name: "public space 1",
+    title: "public space 1",
+    description: "This is a public space artwork",
+    image: "../assets/publicSpace/IMG_01.jpg",
+  },
+  {
+    id: 2,
+    name: "Jane Doe",
+    title: "painting",
+    description: "This is a public space artwork",
+    image: ".../assets/publicSpace/IMG_02.jpg",
+  },
+  {
+    id: 3,
+    name: "John Doe",
+    title: "drawing",
+    description: "This is a public space artwork",
+    image: "../assets/publicSpace/IMG_03.jpg",
+  },
+  {
+    id: 4,
+    name: "Jane Doe",
+    title: "painting",
+    description: "This is a public space artwork",
+    image: "../assets/publicSpace/IMG_04.jpg",
+  },
+  {
+    id: 5,
+    name: "John Doe",
+    title: "drawing",
+    description: "This is a public space artwork",
+    image: "../assets/publicSpace/IMG_05.jpg",
+  },
+  {
+    id: 6,
+    name: "Jane Doe",
+    title: "painting",
+    description: "This is a public space artwork",
+    image: "../assets/publicSpace/IMG_06.jpg",
+  },
+  {
+    id: 7,
+    name: "John Doe",
+    title: "drawing",
+    description: "This is a public space artwork",
+    image: "../assets/publicSpace/IMG_07.jpg",
+  },
+  {
+    id: 8,
+    name: "Jane Doe",
+    title: "painting",
+    description: "This is a public space artwork",
+    image: "../assets/publicSpace/IMG_08.jpg",
+  },
+  {
+    id: 9,
+    name: "John Doe",
+    title: "drawing",
+    description: "This is a public space artwork",
+    image: "../assets/publicSpace/IMG_09.jpg",
+    },
+    {
+    id: 10,
+    name: "Jane Doe",
+    title: "painting",
+    description: "This is a public space artwork",
+    image: "../assets/publicSpace/IMG_10.jpg",
+    },
+    {
+    id: 11,
+    name: "John Doe",
+    title: "drawing",
+    description: "This is a public space artwork",
+    image: "../assets/publicSpace/IMG_11.jpg",
+    },
+    {
+    id: 12,
+        
+    name: "Jane Doe",
+    title: "painting",
+    description: "This is a public space artwork",
+    image: "../assets/publicSpace/IMG_12.jpg",
+    },
+    {
+    id: 13,
+    name: "John Doe",
+    title: "drawing",
+    description: "This is a public space artwork",
+    image: "../assets/publicSpace/IMG_13.jpg",
+    
+  }
+);
